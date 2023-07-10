@@ -1,0 +1,51 @@
+Welcome to the beginning of your programming journey! If you find anything 
+confusing, weird, or just plain wrong, please let one of us know! As this will
+be the first year this course goes into actiion, and will likely have some 
+kinks that need to be worked out.
+
+Here are some extra resources!
+
+  W3Schools - This website is an extremely helpful reference, if you have any 
+  questions, this one could probably clear things up
+    Java
+      https://www.w3schools.com/java/ 
+    Python
+      https://www.w3schools.com/python/default.asp
+
+  CodeAcademy - This site offers free courses on most programming languages,
+  however, as I've found, you can get lost or not really understand what it's
+  trying to tell you. It is still a good resource if you don't understand 
+  something and need another way of looking at it. Or if you don't like our
+  course and want to try it another way
+    Java
+      https://www.codecademy.com/catalog/language/java
+    Python  
+      https://www.codecademy.com/catalog/language/python
+
+More resources to come 
+
+Cheating policy
+  DO NOT CHEAT!
+  You obviously know this, however I will say it here anyway to make sure the 
+  message gets through. Cheating will only make things harder for you in the 
+  future, as by not understanding the concepts outlined in the beginner level, you 
+  will be woefully unprepared for the intermediate course. Think of it like math, 
+  How are you supposed to do algebra if you don't even know how to divide.
+
+  But, what is cheating?
+  - Copying what someone else put down just to show you did it
+  - Finding the first solution on the internet and copy and pasting
+
+
+  Exceptions
+  - If you understand why and how what you put down works, then I would not 
+    really consider it cheating. The purpose of this course is to help you
+    understand how programming works. I don't care how you get there, as long
+    as you get there. (This rule does not apply to quizes)
+  - Asking for help is not cheating. Copying what they said mindlessly down is.
+    Don't be afraid to ask, even if you asked 50 times before and the concept 
+    just isn't getting through, we would still prefer you ask rather than carry 
+    on and not understand.
+
+
+Good luck! Remember, if you have any questions just ask the captains!
