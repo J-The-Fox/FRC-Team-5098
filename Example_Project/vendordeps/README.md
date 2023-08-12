@@ -32,3 +32,5 @@ To remove a library dependency from a project, select `Manage Current Libraries`
 | WPILibNewCommands.json | Libraries for WPILib new commands                                                                                                                                     |
 
 More Info can be found in the [Wiki](https://github.com/J-The-Fox/FRC-Team-5098/wiki)
+
+Credit: Info parsed and copied from the [WPILib Docs](https://docs.wpilib.org/en/stable/)
