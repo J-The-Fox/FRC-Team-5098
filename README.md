@@ -32,5 +32,4 @@ If you would like to contribute to this repository; ✨amazing!✨ Just follow s
 
 ---
 Happy Programming!  
-🏳️‍🌈 Also Happy Pride Month! 🏳️‍⚧️  
 \- [J-The-Fox](https://github.com/J-The-Fox)
