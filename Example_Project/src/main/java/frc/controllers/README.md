@@ -188,11 +188,7 @@ public double deadBand(double value)
 ```
 
 This sets up a deadband function with a deadband of plus or minus 0.175  
-This is simplified by using a ternary expression
-
-<!--- 
-[ternary expression](link to alternate README or wiki page explaining what this is)
---->
+This is simplified by using a [ternary operator](https://github.com/J-The-Fox/FRC-Team-5098/wiki/Java-Operators#ternary-operator)
 
 ```java
 public double getLeftStickX()
