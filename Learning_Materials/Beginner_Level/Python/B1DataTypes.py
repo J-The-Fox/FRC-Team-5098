@@ -31,6 +31,11 @@ print("Hello world! is 2+2 = 4?")
 # we can also print a variable
 print(a_boolean)
 
+# You can also create a variable with no value, and assign it a value later.
+a_num = None
+a_num = 5
+print(a_num)
+
 # Now, if you want a bit of practice, try creating some of your own variables
 # and printing them out. You may also consider writing a reference sheet for
 # for those variables if you think you might forget them.
