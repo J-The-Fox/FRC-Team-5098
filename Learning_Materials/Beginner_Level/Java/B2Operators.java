@@ -26,8 +26,11 @@ public class B2Operators {
     }
 
     // Logical
-    if (x == 5 && y == 5) { // the "&&" is an example of a logical operator
+    if (x == 5 && y == 5) { // the "&&" is an example of a logical operator, representing "AND"
       System.out.println("x and y are both equal to 5!");
+    }
+    if (x == 5 || y == 5) { // the "||" is an example of a logical operator, representing "OR"
+      System.out.println("either x or y is equal to 5!");
     }
   }
 }
