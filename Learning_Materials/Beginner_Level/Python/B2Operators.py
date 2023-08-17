@@ -8,20 +8,31 @@
 
 # Examples
 
-# Arithmetic Operators
-x = 5 + 4  # The "+" is an arithmetic operator
+# ARITHMETIC (+, -, *, /, %)
 
-# Assignment Operators
-x = 5  # The "=" is an assignment operator
+x = 5 + 4  # The "+" is an arithmetic operator
+# however you can also use it to concatenate strings
+testString = "Hello" + " World!"  # this will store testString as "Hello World!"
+# There is also another more unknown operator, the modulos operator
+# the modulos operator returns the remainder of a division problem
+remainder = 10 % 3  # this will store remainder as 1
+
+# ASSIGNMENT (=, +=, -=, *=, /=, %=)
+
+y = 5  # The "=" is an assignment operator
+# the "+=" adds a value to a variable
+y += 5  # this will add 5 to y, so y will now be 10
+
+
+# COMPARISION (==, !=, >, <, >=, <=)
 
 # the next part contains "if statements", which are used to check if a condition is true\
 # We will cover these in more detail later, but for now just focus on the operators
-
-# Comparison Operators
 if x == 5:  # The "==" is a comparison operator
     print("x is equal to 5!")
 
-# Logical Operators
+# LOGICAL (and, or)
+
 if x == 5 and x > 4:  # The "and" is a logical operator
     print("x is equal to 5 and greater than 4!")
 if x == 5 or x > 4:  # The "or" is a logical operator
