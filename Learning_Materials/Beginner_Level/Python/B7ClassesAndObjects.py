@@ -51,8 +51,9 @@ class anotherBlueprintForHouse():
         self.color = color
         self.size = size
 
-    def changeColor(self, newColor):
-        self.color = newColor
+    def changeToBasicHouse(self):
+        self.color = "purple"
+        self.color = "small"
     # to digress for a sec, let us now look at the self keyword
     # the self keyword is used to refer to the object itself
     # for example, if you wanted to change the color of the house, you would need to use the self keyword
@@ -61,5 +62,6 @@ class anotherBlueprintForHouse():
 
 
 newerHouse3 = anotherBlueprintForHouse("blue", "medium")
-newerHouse3.changeColor("purple")
-print("house 3 is the " + newerHouse3.color + " color!")
+newerHouse3.changeToBasicHouse()
+print("house 3 is " + newerHouse3.color +
+      " and " + newerHouse3.size + " size!")
