@@ -45,5 +45,9 @@ public class B5Functions {
     // them, an example is the "Math.max()" function
     Math.max(5, 10); // returns the highest value of 5 and 10
 
+    // little food for thought, look at line 30... doesn't like kinda look like... a
+    // function?
+    // the main function is a special function that is called when you run the
+    // program
   }
 }
