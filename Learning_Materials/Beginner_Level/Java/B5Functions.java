@@ -20,10 +20,10 @@ public class B5Functions {
   }
 
   static int myFunction2() {
-    return (50);
+    return (50); // you use the return keyword to return a value
   }
 
-  static int myFunction3(int x, int y) {
+  static int myFunction3(int x, int y) { // this function takes in two parameters
     return x + y;
   }
 
@@ -36,8 +36,8 @@ public class B5Functions {
     // you can also have functions return a value
     int value = myFunction2(); // this will return "Hello person I know!"
 
-    // you can have as many variables as you want, as long as you seperate them with
-    // a comma
+    // you can also pass variables into functions by createing parameters
+    // these parameters will be in the parentesis of the function
     System.out.println(myFunction3(5, value)); // this will return 55
 
     // built in functions

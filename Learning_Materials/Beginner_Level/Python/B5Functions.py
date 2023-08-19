@@ -7,7 +7,8 @@ def testfunction():  # to create the function, you need to use the keyword "def"
 # to have the code in the function run, you must "call" it
 testfunction()
 
-# you can also pass variables into functions
+# you can create parameters in the function,
+# which are variables that you can pass into the function when you call it
 
 
 def testfunction2(x):
