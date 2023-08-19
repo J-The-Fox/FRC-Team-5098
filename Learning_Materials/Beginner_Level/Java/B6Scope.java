@@ -1,4 +1,4 @@
-public class B5Scope {
+public class B6Scope {
   static void assignMethod() {
     int numInFunction = 5;
   }
@@ -30,7 +30,7 @@ public class B5Scope {
     // However, there are two simple ways to get around this. The first is to
     // declare the variable outside of the function or if statement.
     int y = 5; // variable is outside of if statement
-    if (z) {
+    if (bool) {
       y -= 5; // modfies the variable y
     }
     System.out.println(y); // this will work because y is accessible here
