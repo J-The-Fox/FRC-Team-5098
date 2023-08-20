@@ -1,9 +1,10 @@
-public class DataTypes { // ignore for now
+public class B1DataTypes { // ignore for now
   public static void main(String[] args) { // ignore for now
     // Hello! Ths is the file for all the various data types in java! Here are
     // the main ones that we will be focusing on right now
     int myNum = 5; // Integer (whole number)
-    float myFloatNum = 5.99f; // Floating point number
+    double myDoubleNum = 5.99; // Decimal point number
+    float myFloatNum = 5.99f; // Decimal point number (needs to have the f at the end)
     char myLetter = 'D'; // Character
     boolean myBool = true; // Boolean
     String myText = "Hello"; // String
