@@ -47,5 +47,12 @@ Cheating policy
     just isn't getting through, we would still prefer you ask rather than carry 
     on and not understand.
 
+We will be learning about 
+  Datatypes
+  Operators
+  If-Else-Statement
+  functions
+  Scope
+  Classes and objects
 
 Good luck! Remember, if you have any questions just ask the captains!

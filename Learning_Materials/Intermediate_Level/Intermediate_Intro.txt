@@ -1,3 +1,13 @@
 Hey! Good to see you here! it means that your at least dedicated enough to 
 stick through a lot of boring reading files and wracking your brain at whatever
-I meant. Now onto the second leg of your journey
+I meant. Now onto the second leg of your journey. This will include
+
+
+Converting Data Types
+Arrays
+While and For Loops
+Enums
+More Class stuff
+Importing Files and Libraries
+
+Transfering to Java if on Python
