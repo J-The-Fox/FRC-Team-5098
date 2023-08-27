@@ -11,6 +11,8 @@ public class B3IfElseStatement {
     // This is an if statement, and it checks if 5 is greater than 2
     if (5 > 2) { 
       text = "value is greater than 2"; // If the condition is true, then this code will run
+      // notice how this line is inside the curly braces, this means that anything inside 
+      // the curly braces will run if the condition is true
     }
 
     // If-Else statements provide an alternative if the condition is false
