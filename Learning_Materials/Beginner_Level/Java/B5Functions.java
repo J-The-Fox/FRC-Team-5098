@@ -5,7 +5,7 @@ public class B5Functions {
   // code.
   // to create the function, you need to use the following syntax:
 
-  // public static void function_name() {
+  // static void function_name() {
   // code goes here
   // }
 
@@ -45,9 +45,7 @@ public class B5Functions {
     // them, an example is the "Math.max()" function
     Math.max(5, 10); // returns the highest value of 5 and 10
 
-    // little food for thought, look at line 30... doesn't like kinda look like... a
-    // function?
-    // the main function is a special function that is called when you run the
-    // program
+    // little food for thought, look at line 30... doesn't like kinda look like... a function?
+    // the main function is a special function that is called when you run the program
   }
 }
