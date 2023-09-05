@@ -14,6 +14,8 @@ public class Xbox360
 
     Joystick joystick;
 
+
+    // Create a deadBand method for the controller as it drifts a little
     public double deadBand(double value)
     {
         return Math.abs(value) < 0.175 ? 0 : value;

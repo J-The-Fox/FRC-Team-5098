@@ -8,6 +8,9 @@ public class LogitechAttack3
 {
     private final Joystick controller;
 
+    // These are the button and axis IDs for the Logitech F310 controller.
+    // They are constants because they will never change.
+    // They always start with a k as a naming convention.
     private final int kXAxis = 0;
     private final int kYAxis = 1;
     private final int kSlider = 2;

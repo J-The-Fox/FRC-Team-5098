@@ -7,7 +7,11 @@ import java.lang.Math;
 // Note: This is modified from the original code to add deadbanding
 
 public class LogitechF310
-{
+{   
+
+    // These are the button and axis IDs for the Logitech F310 controller.
+    // They are constants because they will never change.
+    // They always start with a k as a naming convention.
     private final int kIdButtonA           = 1;
     private final int kIdButtonB           = 2;
     private final int kIdButtonX           = 3;
@@ -21,8 +25,6 @@ public class LogitechF310
     private final int kIdlefttrigger       = 2;
     private final int kIdrighttrigger      = 3;
     private final int kIdDpad              = 0;
-
-    // ...
 
     private Joystick controller;
 
