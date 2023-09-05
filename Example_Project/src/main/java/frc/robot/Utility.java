@@ -46,6 +46,7 @@ public class Utility
      * If the value is below the minimum, it will be set to the minimum.
      */
     {
+        // This is a ternary operator. It is a short way of writing an if statement.
         return value < min ? min : value > max ? max
                                                : value;
     }
