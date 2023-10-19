@@ -1,0 +1,51 @@
+{
+    "controllerID": 0,
+    "auxControllerID": 1,
+    "swerveDrive": {
+        "FLSwerve": {
+            "driveID": 1,
+            "turnID": 2,
+            "encoderID": 10,
+            "location": "front",
+            "defensiveAngle": 315,
+            "posY": -0.238125,
+            "posX": 0.365125
+        },
+        "FRSwerve": {
+            "driveID": 7,
+            "turnID": 8,
+            "encoderID": 12,
+            "location": "front",
+            "defensiveAngle": 45,
+            "posY": 0.238125,
+            "posX": 0.365125
+        },
+        "BLSwerve": {
+            "driveID": 3,
+            "turnID": 4,
+            "encoderID": 11,
+            "location": "back",
+            "defensiveAngle": 45,
+            "posY": -0.238125,
+            "posX": -0.365125
+        },
+        "BRSwerve": {
+            "driveID": 5,
+            "turnID": 6,
+            "encoderID": 9,
+            "location": "back",
+            "defensiveAngle": 315,
+            "posY": 0.238125,
+            "posX": -0.365125
+        }
+    },
+    "clawSettings": {
+        "pneumaticsModuleId": 1,
+        "openingPortId": 7,
+        "closingPortId": 8
+    },
+    "armSettings": {
+        "shoulderMotorID": 13,
+        "elbowMotorID": 14
+    }
+}
