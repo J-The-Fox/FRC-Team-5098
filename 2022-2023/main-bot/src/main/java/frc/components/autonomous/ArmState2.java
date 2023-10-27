@@ -32,7 +32,7 @@ public class ArmState2 extends State
         }
         else if (timer.hasElapsed(0.5))
         {
-            CommonData.ClawState = Claw.State.kOpen;
+            CommonData.clawState = Claw.State.kOpen;
         }
 
         return false;
