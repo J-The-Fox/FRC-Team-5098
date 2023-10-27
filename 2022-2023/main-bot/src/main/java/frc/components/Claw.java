@@ -14,8 +14,7 @@ import frc.settings.ClawSettings;
  *               in the interface.
  * 'IComponent': The name of the interface this class implements. This can be more than one, separated by commas.
  */
-public class Claw implements IComponent
-{
+public class Claw implements IComponent {
 
     /*
      * 'public': This enum can be accessed outside this class.
@@ -43,8 +42,7 @@ public class Claw implements IComponent
      * '(int _, int _, int _)': Each argument is an 'int'. Generally, arguments need not all be the same type.
      * '(_ pneumaticsModuleId, _ openingPortId, _ closingPortId)': Each argument's name. These are variables.
      */
-    public Claw(ClawSettings settings)
-    {
+    public Claw(ClawSettings settings) {
         m_solenoid = new DoubleSolenoid(settings.pneumaticsModuleId, PneumaticsModuleType.REVPH, settings.openingPortId, settings.closingPortId);
     }
 
@@ -54,12 +52,10 @@ public class Claw implements IComponent
      * 'update': The name of this method.
      * '()': This method accepts 0 arguments.
      */
-    public void update()
-    {
+    public void update() {
         // This method will be called periodically.
         // This assumes that 'CommonData.ClawState' updates elsewhere before this is called.
-        switch (CommonData.clawState)
-        {
+        switch (CommonData.clawState) {
         case kOpen:
             m_solenoid.set(Value.kForward); // piston pushes forward -> claw opens
             break;

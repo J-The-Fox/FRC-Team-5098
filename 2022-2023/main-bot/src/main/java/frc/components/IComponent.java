@@ -7,8 +7,7 @@ package frc.components;
  *              error.
  * 'IComponent': The name of this particular interface.
  */
-public interface IComponent
-{
+public interface IComponent {
     /*
      * 'public': This method can be accessed outside this class.
      * 'void': This method does not return anything.

@@ -7,8 +7,7 @@ import frc.components.Claw;
 * 'class': This can contain variables and functionality.
 * 'CommonData': The name of this class. It is treated as a TYPE.
 */
-public class CommonData 
-{
+public class CommonData  {
     /*
     * 'public': This variable can be accessed outside this class.
     * 'static': This variable is the same across the entire class; 

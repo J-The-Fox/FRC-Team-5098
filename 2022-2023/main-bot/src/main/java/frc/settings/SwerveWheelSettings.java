@@ -1,7 +1,6 @@
 package frc.settings;
 
-public class SwerveWheelSettings
-{
+public class SwerveWheelSettings {
 
     public int driveID;
     public int turnID;
