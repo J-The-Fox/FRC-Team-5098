@@ -4,23 +4,17 @@
 
 package frc.robot;
 
-// Internal Imports
+// Imports //
 import java.io.IOException;
-
-// External Imports
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-// Local Imports
-import frc.CommonData;
-import frc.components.IComponent;
-import frc.components.ShuffleBoardController;
-import frc.settings.Settings;
-
-// WPILib / Vendordep Imports
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Compressor;
+import frc.CommonData;
+import frc.components.IComponent;
+import frc.components.ShuffleBoardController;
+import frc.settings.Settings;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to

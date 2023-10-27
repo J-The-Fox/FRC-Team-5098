@@ -58,7 +58,7 @@ public class Claw implements IComponent
     {
         // This method will be called periodically.
         // This assumes that 'CommonData.ClawState' updates elsewhere before this is called.
-        switch (CommonData.ClawState)
+        switch (CommonData.clawState)
         {
         case kOpen:
             m_solenoid.set(Value.kForward); // piston pushes forward -> claw opens

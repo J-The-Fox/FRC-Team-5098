@@ -168,18 +168,18 @@ public class Robot extends TimedRobot
 
         if (logitechF310.getLeftBumper())
         {
-            CommonData.ClawState = Claw.State.kOpen;
+            CommonData.clawState = Claw.State.kOpen;
         }
         else if (logitechF310.getRightBumper())
         {
-            CommonData.ClawState = Claw.State.kClosed;
+            CommonData.clawState = Claw.State.kClosed;
         }
     }
 
     @Override
     public void disabledInit()
     {
-        CommonData.ClawState    = Claw.State.kClosed;
+        CommonData.clawState    = Claw.State.kClosed;
         CommonData.sideSpeed    = 0;
         CommonData.desiredTurn  = 0;
         CommonData.forwardSpeed = 0;
