@@ -28,7 +28,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: WPILib Build 2022-2023
-              working-directory: ./2022-2023
+              working-directory: ./2022-2023/main-bot
               run: ./gradlew build
             
 
