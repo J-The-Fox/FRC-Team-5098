@@ -3,7 +3,7 @@ name: WPILib Build
 on: push
 
 jobs:
-    build-latest:
+    Build-Latest:
         runs-on:
             - self-hosted
             - Primary
@@ -18,7 +18,7 @@ jobs:
             # Run gradlew to build the robot code with java home being what it is set to during manual runtime
             # This machine should have Java 17 installed which is what WPILib is using for building with 2024
               run: ./gradlew build
-    build-2022-2023:
+    Build-2022-2023:
         runs-on:
             - self-hosted
             - Primary
