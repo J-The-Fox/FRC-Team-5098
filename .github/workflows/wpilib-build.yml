@@ -1,0 +1,22 @@
+name: WPILib Build Test
+
+on: push
+
+jobs:
+    build:
+        runs-on:
+            - self-hosted
+            - Primary
+        steps:
+            # Check out the code so the action can use it
+            - uses: actions/checkout@v4
+            - name: WPILib Build
+            
+            # Set the working directory so gradlew and WPILib are in the right folder
+            - working-directory: ./2023-2024/main-bot
+
+            # Run gradlew to build the robot code with java home being what it is set to during manual runtime
+            - run: ./gradlew build -Dorg.gradle.java.home="/home/jay/wpilib/2024/jdk"
+            
+
+# I have no idea if this will work but this is just to test to see if it's possible and to get used to using actions
