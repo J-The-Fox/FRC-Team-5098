@@ -7,7 +7,7 @@ jobs:
     name: Code Lint Check
     runs-on:
       - self-hosted
-      - Primary
+      - Backup
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
