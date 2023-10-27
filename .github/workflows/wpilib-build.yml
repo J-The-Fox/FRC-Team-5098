@@ -3,7 +3,7 @@ name: WPILib Build Test
 on: push
 
 jobs:
-    build:
+    build-latest:
         runs-on:
             - self-hosted
             - Primary
@@ -12,11 +12,23 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
             
-            - name: WPILib Build
+            - name: WPILib Build 2023-2024
             # Set the working directory so gradlew and WPILib are in the right folder
               working-directory: ./2023-2024/main-bot
             # Run gradlew to build the robot code with java home being what it is set to during manual runtime
             # This machine should have Java 17 installed which is what WPILib is using for building with 2024
+              run: ./gradlew build
+    build-2022-2023:
+        runs-on:
+            - self-hosted
+            - Backup
+        steps:
+            # Check out the code so the action can use it
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: WPILib Build 2022-2023
+              working-directory: ./2022-2023
               run: ./gradlew build
             
 
