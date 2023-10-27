@@ -1,4 +1,4 @@
-name: WPILib Build Test
+name: WPILib Build
 
 on: push
 
