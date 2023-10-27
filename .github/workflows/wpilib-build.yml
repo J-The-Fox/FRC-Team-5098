@@ -21,7 +21,7 @@ jobs:
     build-2022-2023:
         runs-on:
             - self-hosted
-            - Backup
+            - Primary
         steps:
             # Check out the code so the action can use it
             - name: Checkout code
