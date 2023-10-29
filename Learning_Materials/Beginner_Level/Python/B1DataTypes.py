@@ -8,7 +8,7 @@ a_decimal = -0.57382
 # 3. str (any string)
 a_string = "Hello World!"
 # 4. char (any single character)
-a_character = 'a'
+a_character = "a"
 # 5. bool (A True or False)
 a_boolean = True
 the_other_boolean = False

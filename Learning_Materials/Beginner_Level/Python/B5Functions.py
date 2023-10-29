@@ -1,4 +1,7 @@
-# If you have a section of code that you need to use multiple times, you can put it in a function and call that function whenever you need to use that code.
+# If you have a section of code that you need to use multiple times, 
+# you can put it in a function and call that function
+# whenever you need to use that code.
+
 
 def testfunction():  # to create the function, you need to use the keyword "def" followed by the name of the function and then a set of parentheses.
     print("This is a function being called!")
@@ -23,7 +26,7 @@ testfunction2("Here it is being called again!")
 
 
 def testfunction3(x, y, z):
-    return x/y*z
+    return x / y * z
 
 
 print(testfunction3(10, 5, 2))

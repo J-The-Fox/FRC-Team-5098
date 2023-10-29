@@ -1,4 +1,4 @@
-# FRC Team 5098 Sting-r!
+# FRC Team 5098 Sting-r
 
 ![FRC-Team-5098-GitHub](https://github.com/J-The-Fox/FRC-Team-5098/assets/116409406/5e9d98b5-ade7-4456-bec0-9831072bbb54)
 ![badge](https://img.shields.io/github/last-commit/J-The-Fox/FRC-Team-5098?color=ee7b1a&display_timestamp=committer&label=Last%20Commit&style=flat-square)

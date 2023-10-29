@@ -1,4 +1,4 @@
-## Structure of components
+# Structure of components
 
 Each component should implement an `update` function, as specified in
 `IComponent`. What each component does in its `update` depends on that
