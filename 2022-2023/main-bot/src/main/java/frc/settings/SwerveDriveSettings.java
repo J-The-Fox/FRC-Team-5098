@@ -1,7 +1,6 @@
 package frc.settings;
 
-public class SwerveDriveSettings
-{
+public class SwerveDriveSettings {
 
     public SwerveWheelSettings FLSwerve;
     public SwerveWheelSettings FRSwerve;

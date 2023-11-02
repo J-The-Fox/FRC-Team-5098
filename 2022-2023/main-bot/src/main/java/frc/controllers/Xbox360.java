@@ -7,95 +7,77 @@ import java.lang.Math;
 public class Xbox360
 {
 
-    public Xbox360(int ID)
-    {
+    public Xbox360(int ID) {
         joystick = new Joystick(ID);
     }
 
     Joystick joystick;
 
-    public double deadBand(double value)
-    {
+    public double deadBand(double value) {
         return Math.abs(value) < 0.175 ? 0 : value;
     }
 
-    public double getLeftStickX()
-    {
+    public double getLeftStickX() {
         return deadBand(joystick.getRawAxis(0));
     }
 
-    public double getLeftStickY()
-    {
+    public double getLeftStickY() {
         return deadBand(joystick.getRawAxis(1));
     }
 
-    public double getRightStickX()
-    {
+    public double getRightStickX() {
         return deadBand(joystick.getRawAxis(4));
     }
 
-    public double getRightStickY()
-    {
+    public double getRightStickY() {
         return deadBand(joystick.getRawAxis(5));
     }
 
-    public boolean getA()
-    {
+    public boolean getA() {
         return joystick.getRawButton(1);
     }
 
-    public boolean getB()
-    {
+    public boolean getB() {
         return joystick.getRawButton(2);
     }
 
-    public boolean getX()
-    {
+    public boolean getX() {
         return joystick.getRawButton(3);
     }
 
-    public boolean getY()
-    {
+    public boolean getY() {
         return joystick.getRawButton(4);
     }
 
-    public boolean getLB()
-    {
+    public boolean getLB() {
         return joystick.getRawButton(5);
     }
 
-    public boolean getRB()
-    {
+    public boolean getRB() {
         return joystick.getRawButton(6);
     }
 
-    public boolean getBack()
-    {
+    public boolean getBack() {
         return joystick.getRawButton(7);
     }
 
-    public boolean getStart()
-    {
+    public boolean getStart() {
         return joystick.getRawButton(8);
     }
 
-    public boolean getLeftStick()
-    {
+    public boolean getLeftStick() {
         return joystick.getRawButton(9);
     }
 
-    public boolean getRightStick()
-    {
+    public boolean getRightStick() {
         return joystick.getRawButton(10);
     }
 
-    public double getLeftTrigger()
-    {
+    public double getLeftTrigger() {
         return joystick.getRawAxis(2);
     }
 
-    public double getRightTrigger()
-    {
+    public double getRightTrigger() {
         return joystick.getRawAxis(3);
     }
 
@@ -111,8 +93,7 @@ public class Xbox360
         none
     }
 
-    public dPad getPad()
-    {
+    public dPad getPad() {
         switch (joystick.getPOV())
         {
         case 0:
@@ -147,23 +128,19 @@ public class Xbox360
         }
     }
 
-    public void rumbleHigh()
-    {
+    public void rumbleHigh() {
         joystick.setRumble(RumbleType.kRightRumble, 1);
     }
 
-    public void rumbleLow()
-    {
+    public void rumbleLow() {
         joystick.setRumble(RumbleType.kLeftRumble, 1);
     }
 
-    public void letsGetReadyToRumble()
-    {
+    public void letsGetReadyToRumble() {
         joystick.setRumble(RumbleType.kBothRumble, 1);
     }
 
-    public void rumbleOff()
-    {
+    public void rumbleOff() {
         joystick.setRumble(RumbleType.kBothRumble, 0);
     }
 }

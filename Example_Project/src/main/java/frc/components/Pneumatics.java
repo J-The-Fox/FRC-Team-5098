@@ -1,13 +1,11 @@
 package frc.components;
 
-// Local Imports
-import frc.CommonData;
-import frc.settings.PneumaticsSettings;
-
-// WPILib Imports
+// Imports //
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
+import frc.CommonData;
+import frc.settings.PneumaticsSettings;
 
 public class Pneumatics implements IComponent{
     

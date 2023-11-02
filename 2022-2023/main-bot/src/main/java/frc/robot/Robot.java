@@ -26,8 +26,7 @@ import java.io.IOException;
  * the package after creating this project, you must also update the build.gradle file in the
  * project.
  */
-public class Robot extends TimedRobot
-{
+public class Robot extends TimedRobot {
     /*
      * Constants should go here. For example:
      *
@@ -44,16 +43,13 @@ public class Robot extends TimedRobot
      */
 
     public static Settings settings;
-    static
-    {
+    static {
         ObjectMapper mapper = new ObjectMapper();
-        try
-        {
+        try {
             var filepath = Filesystem.getDeployDirectory().toPath().resolve("robot_settings.json");
             settings     = mapper.readValue(filepath.toFile(), Settings.class);
         }
-        catch (IOException ex)
-        {
+        catch (IOException ex) {
             System.out.println(ex.toString());
         }
     }
@@ -91,35 +87,30 @@ public class Robot extends TimedRobot
     }
 
     @Override
-    public void robotPeriodic()
-    {
+    public void robotPeriodic() {
         // for(var sensor : sensorComponents)
         //{
         //   sensor.update();
         // }
 
-        for (var actuator : actuatorComponents)
-        {
+        for (var actuator : actuatorComponents) {
             actuator.update();
         }
     }
 
     @Override
-    public void autonomousInit()
-    {
+    public void autonomousInit() {
         autonomous           = new Autonomous();
         CommonData.calibrate = true;
     }
 
     @Override
-    public void autonomousPeriodic()
-    {
+    public void autonomousPeriodic() {
         autonomous.update();
     }
 
     @Override
-    public void teleopInit()
-    {
+    public void teleopInit() {
     }
 
     // 18.75 -> 0.47625
@@ -140,23 +131,19 @@ public class Robot extends TimedRobot
         CommonData.desiredShoulderAngle = CommonData.shoulderAngle + (logitechF310.getLeftStickY() * 35000); // 10000
         CommonData.desiredElbowAngle    = CommonData.elbowAngle + (logitechF310.getRightStickY() * 10000);   // 10000
 
-        if (logitechF310.getDUp())
-        {
+        if (logitechF310.getDUp()) {
             CommonData.desiredShoulderAngle = Arm.Position.kTopShelf.shoulderPos;
             CommonData.desiredElbowAngle    = Arm.Position.kTopShelf.elbowPos;
         }
-        else if (logitechF310.getDDown())
-        {
+        else if (logitechF310.getDDown()) {
             CommonData.desiredShoulderAngle = Arm.Position.kMiddleShelfOrHumanPlayer.shoulderPos;
             CommonData.desiredElbowAngle    = Arm.Position.kMiddleShelfOrHumanPlayer.elbowPos;
         }
-        else if (logitechF310.getA())
-        {
+        else if (logitechF310.getA()) {
             CommonData.desiredShoulderAngle = Arm.Position.kGroundPickup.shoulderPos;
             CommonData.desiredElbowAngle    = Arm.Position.kGroundPickup.elbowPos;
         }
-        else if (logitechF310.getB())
-        {
+        else if (logitechF310.getB()) {
             CommonData.desiredShoulderAngle = Arm.Position.kHome.shoulderPos;
             CommonData.desiredElbowAngle    = Arm.Position.kHome.elbowPos;
         }
@@ -166,20 +153,17 @@ public class Robot extends TimedRobot
             CommonData.desiredElbowAngle    = Arm.Position.kHumanPlayerStation.elbowPos;
         }
 
-        if (logitechF310.getLeftBumper())
-        {
-            CommonData.ClawState = Claw.State.kOpen;
+        if (logitechF310.getLeftBumper()) {
+            CommonData.clawState = Claw.State.kOpen;
         }
-        else if (logitechF310.getRightBumper())
-        {
-            CommonData.ClawState = Claw.State.kClosed;
+        else if (logitechF310.getRightBumper()) {
+            CommonData.clawState = Claw.State.kClosed;
         }
     }
 
     @Override
-    public void disabledInit()
-    {
-        CommonData.ClawState    = Claw.State.kClosed;
+    public void disabledInit() {
+        CommonData.clawState    = Claw.State.kClosed;
         CommonData.sideSpeed    = 0;
         CommonData.desiredTurn  = 0;
         CommonData.forwardSpeed = 0;
@@ -194,28 +178,23 @@ public class Robot extends TimedRobot
     }
 
     @Override
-    public void disabledPeriodic()
-    {
+    public void disabledPeriodic() {
     }
 
     @Override
-    public void testInit()
-    {
+    public void testInit() {
         CommonData.calibrate = true;
     }
 
     @Override
-    public void testPeriodic()
-    {
+    public void testPeriodic() {
     }
 
     @Override
-    public void simulationInit()
-    {
+    public void simulationInit() {
     }
 
     @Override
-    public void simulationPeriodic()
-    {
+    public void simulationPeriodic() {
     }
 }

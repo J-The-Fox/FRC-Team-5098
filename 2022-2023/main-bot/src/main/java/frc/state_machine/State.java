@@ -1,16 +1,14 @@
 package frc.state_machine;
 
-public abstract class State
-{
-    public void onEnter()
-    {
+public abstract class State {
+
+    public void onEnter() {
     }
-    public void onExit()
-    {
+    
+    public void onExit() {
     }
 
-    public boolean isValid()
-    {
+    public boolean isValid() {
         return true;
     }
 

@@ -1,7 +1,6 @@
 package frc.settings;
 
-public class Settings
-{
+public class Settings {
 
     public SwerveDriveSettings swerveDrive;
     public ClawSettings        clawSettings;

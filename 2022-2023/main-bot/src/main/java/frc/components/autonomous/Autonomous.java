@@ -3,12 +3,10 @@ package frc.components.autonomous;
 import frc.components.IComponent;
 import frc.state_machine.StateMachine;
 
-public class Autonomous implements IComponent
-{
+public class Autonomous implements IComponent {
     StateMachine m_stateMachine = new StateMachine();
 
-    public Autonomous()
-    {
+    public Autonomous() {
         // m_driveStateMachine.addState(new DriveState1());
         // m_driveStateMachine.addState(new DriveState2());
 
@@ -24,8 +22,7 @@ public class Autonomous implements IComponent
     }
 
     @Override
-    public void update()
-    {
+    public void update() {
         m_stateMachine.run();
     }
 }

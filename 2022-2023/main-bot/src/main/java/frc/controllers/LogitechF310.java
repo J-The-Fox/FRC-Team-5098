@@ -3,8 +3,7 @@ package frc.controllers;
 import edu.wpi.first.wpilibj.Joystick;
 import java.lang.Math;
 
-public class LogitechF310
-{
+public class LogitechF310 {
     // Imported From Code/2022/stingr/main-bot
 
     private final int kIdButtonA           = 1;
@@ -25,154 +24,124 @@ public class LogitechF310
 
     private Joystick controller;
 
-    public double deadBand(double value)
-    {
+    public double deadBand(double value) {
         return Math.abs(value) < 0.2 ? 0 : value;
     }
 
-    public LogitechF310(int id)
-    {
+    public LogitechF310(int id) {
         controller = new Joystick(id);
     }
 
-    public boolean getA()
-    {
+    public boolean getA() {
         return controller.getRawButton(kIdButtonA);
     }
 
-    public boolean getB()
-    {
+    public boolean getB() {
         return controller.getRawButton(kIdButtonB);
     }
 
-    public boolean getX()
-    {
+    public boolean getX() {
         return controller.getRawButton(kIdButtonX);
     }
 
-    public boolean getY()
-    {
+    public boolean getY() {
         return controller.getRawButton(kIdButtonY);
     }
 
-    public boolean getLeftBumper()
-    {
+    public boolean getLeftBumper() {
         return controller.getRawButton(kIdButtonBumperLeft);
     }
 
-    public boolean getRightBumper()
-    {
+    public boolean getRightBumper() {
         return controller.getRawButton(kIdButtonBumperRight);
     }
 
-    public double getLeftStickX()
-    {
+    public double getLeftStickX() {
         return deadBand(controller.getRawAxis(kIdAxisleftX));
     }
 
-    public double getLeftStickY()
-    {
+    public double getLeftStickY() {
         return deadBand(controller.getRawAxis(kIdAxisleftY));
     }
 
-    public double getRightStickX()
-    {
+    public double getRightStickX() {
         return deadBand(controller.getRawAxis(kIdAxisrightX));
     }
 
-    public double getRightStickY()
-    {
+    public double getRightStickY() {
         return deadBand(controller.getRawAxis(kIdAxisrightY));
     }
 
-    public double getLeftTrigger()
-    {
+    public double getLeftTrigger() {
         return controller.getRawAxis(kIdlefttrigger);
     }
 
-    public double getRightTrigger()
-    {
+    public double getRightTrigger() {
         return controller.getRawAxis(kIdrighttrigger);
     }
 
-    public boolean getDUp()
-    {
+    public boolean getDUp() {
         int degrees = controller.getPOV(kIdDpad);
-        if (degrees == 315)
-        {
+        if (degrees == 315) {
             return true;
         }
 
-        if (degrees == 0)
-        {
+        if (degrees == 0) {
             return true;
         }
 
-        if (degrees == 45)
-        {
+        if (degrees == 45) {
             return true;
         }
 
         return false;
     }
 
-    public boolean getDRight()
-    {
+    public boolean getDRight() {
         int degrees = controller.getPOV(kIdDpad);
-        if (degrees == 45)
-        {
+        if (degrees == 45) {
             return true;
         }
 
-        if (degrees == 90)
-        {
+        if (degrees == 90) {
             return true;
         }
 
-        if (degrees == 135)
-        {
+        if (degrees == 135) {
             return true;
         }
 
         return false;
     }
 
-    public boolean getDDown()
-    {
+    public boolean getDDown() {
         int degrees = controller.getPOV(kIdDpad);
-        if (degrees == 135)
-        {
+        if (degrees == 135) {
             return true;
         }
 
-        if (degrees == 180)
-        {
+        if (degrees == 180) {
             return true;
         }
 
-        if (degrees == 225)
-        {
+        if (degrees == 225) {
             return true;
         }
 
         return false;
     }
 
-    public boolean getDLeft()
-    {
+    public boolean getDLeft() {
         int degrees = controller.getPOV(kIdDpad);
-        if (degrees == 225)
-        {
+        if (degrees == 225) {
             return true;
         }
 
-        if (degrees == 270)
-        {
+        if (degrees == 270) {
             return true;
         }
 
-        if (degrees == 315)
-        {
+        if (degrees == 315) {
             return true;
         }
 

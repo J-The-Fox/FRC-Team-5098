@@ -4,18 +4,12 @@
 
 package frc.robot;
 
-// Internal Imports //
+// Imports //
 import java.io.IOException; // Used to catch any input/output exceptions
-
-// External Imports //
 import com.fasterxml.jackson.databind.ObjectMapper; // Used to read the robot_settings.json file
-
-// WPILib Imports //
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import frc.CommonData;
-
-// Local Imports //
 import frc.components.IComponent;
 import frc.components.SwerveDrive;
 import frc.controllers.XboxOne; // Controller class

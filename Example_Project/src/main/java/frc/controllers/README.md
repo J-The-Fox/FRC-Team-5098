@@ -58,7 +58,7 @@ You can repeat this for however many buttons you have on your controller, naming
 Setting up inputs for an axis is similar to that of a controller except using the `joystick.getRawAxis(ID)` method.
 The method will return a double (from -1 to 1) so the function will also return a double
 
-> Checking the ID of the axis is almost the same for checking the ID of the buttons. 
+> Checking the ID of the axis is almost the same for checking the ID of the buttons.  
 > Instead of looking at which squares lights up, look at which bar moves up and down when moved
 
 Ex:
@@ -73,7 +73,7 @@ You can repeat this for each axis you have on your controller, naming the functi
 
 **Setting Up A D-Pad:**
 
-The D-Pad differs greatly from any other method as it uses a POV to get which position it is in. 
+The D-Pad differs greatly from any other method as it uses a POV to get which position it is in.  
 As such, it needs some extra code to get it working
 
 ```java

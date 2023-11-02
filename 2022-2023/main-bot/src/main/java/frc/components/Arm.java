@@ -6,27 +6,29 @@ import frc.CommonData;
 import frc.robot.Utility;
 import frc.settings.ArmSettings;
 
-public class Arm implements IComponent
-{
+public class Arm implements IComponent {
+
     public enum Position {
+        /*
+         * This is the positions or 'presets' of the arms
+         */
+        
         kTopShelf(-85465, 99934),
         kMiddleShelfOrHumanPlayer(-30156, 152244),
         kGroundPickup(10411, 26723),
         kHome(-32405, 941),
         kHumanPlayerStation(-55821, 45126);
 
-        Position(double shoulderPos, double elbowPos)
-        {
-            this.shoulderPos = shoulderPos;
-            this.elbowPos    = elbowPos;
+        Position(double presetShoulderPos, double presetElbowPos) {
+            shoulderPos = presetShoulderPos;
+            elbowPos    = presetElbowPos;
         }
 
         public double shoulderPos;
         public double elbowPos;
     }
 
-    public Arm(ArmSettings settings)
-    {
+    public Arm(ArmSettings settings) {
         shoulderMotor = new TalonFX(settings.shoulderMotorID);
         elbowMotor    = new TalonFX(settings.elbowMotorID);
     }
@@ -34,8 +36,7 @@ public class Arm implements IComponent
     TalonFX shoulderMotor;
     TalonFX elbowMotor;
 
-    public void moveToPOS()
-    {
+    public void moveToPOS() {
         CommonData.shoulderAngle = shoulderMotor.getSelectedSensorPosition();
         CommonData.elbowAngle    = elbowMotor.getSelectedSensorPosition();
 
@@ -46,8 +47,7 @@ public class Arm implements IComponent
         elbowMotor.set(ControlMode.Position, actualElbowTarget);
     }
 
-    public void update()
-    {
+    public void update() {
         moveToPOS();
     }
 }

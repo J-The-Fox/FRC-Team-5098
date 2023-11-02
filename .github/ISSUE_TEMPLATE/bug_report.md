@@ -28,11 +28,11 @@ If applicable, add screenshots and / or videos to help explain your problem
 **Versions (if applicable):**
 > If using Python, please list off what version of robotpy you are using along with the version of Python
 
- - OS: [e.g. Arch Linux]
- - Version [e.g. 6.4.12]
- - Architecture [e.g x86_64]
- - Java, C++ or Python Version [e.g. Python 3.11, Java 20.0.2]
- - WPILib Version [e.g. 2023.4.3]
+- OS: [e.g. Arch Linux]
+- Version [e.g. 6.4.12]
+- Architecture [e.g x86_64]
+- Java, C++ or Python Version [e.g. Python 3.11, Java 20.0.2]
+- WPILib Version [e.g. 2023.4.3]
 
 **Additional context**
 Add any other context about the problem down here.

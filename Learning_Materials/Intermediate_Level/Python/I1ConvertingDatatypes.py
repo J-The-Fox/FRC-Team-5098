@@ -24,4 +24,4 @@ print(addedVariable)
 
 # regarding doubles to integers, it will round down when converted
 var = 7.9
-print(int(var)) # this will give you 7
+print(int(var))  # this will give you 7

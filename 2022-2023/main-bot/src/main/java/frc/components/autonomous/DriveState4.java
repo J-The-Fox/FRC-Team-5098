@@ -7,27 +7,23 @@ import frc.CommonData;
 import frc.robot.Utility;
 import frc.state_machine.State;
 
-public class DriveState4 extends State
-{
+public class DriveState4 extends State {
     NetworkTable      table = NetworkTableInstance.getDefault().getTable("limelight");
     NetworkTableEntry tv    = table.getEntry("tv");
     NetworkTableEntry tid   = table.getEntry("tid");
     NetworkTableEntry array = table.getEntry("camerapose_targetspace");
 
     @Override
-    public void onEnter()
-    {
+    public void onEnter() {
         System.out.println("Drive State 4 entered");
     }
     @Override
-    public void onExit()
-    {
+    public void onExit() {
         System.out.println("Drive State 4 exited");
     }
 
     @Override
-    public boolean run()
-    {
+    public boolean run() {
         boolean found = tv.getDouble(0) == 1;
         double  id    = tid.getDouble(-1);
 
@@ -37,8 +33,7 @@ public class DriveState4 extends State
         // CommonData.desiredHeading = 0;
         // CommonData.desiredPower   = 0;
         CommonData.desiredTurn = 0;
-        if (found && (id == 2) || (id == 7))
-        {
+        if (found && (id == 2) || (id == 7)) {
             Double[] targetInfo = array.getDoubleArray(new Double[0]);
 
             tx = targetInfo[0];      // tx
@@ -49,12 +44,10 @@ public class DriveState4 extends State
             tz = Utility.clamp(tz, -1.0, 1.0);
             ry = Utility.sigmoid(ry / 10) * 2 - 1;
 
-            if ((Math.abs(tz) < 0.1) && (Math.abs(tx) < 0.15) && (Math.abs(ry) < 0.6))
-            {
+            if ((Math.abs(tz) < 0.1) && (Math.abs(tx) < 0.15) && (Math.abs(ry) < 0.6)) {
                 return true;
             }
-            else
-            {
+            else {
                 // Drive Until Center And Lined Up With The April Tag
                 double theta   = Math.atan2(tx, tz);
                 double degrees = Math.toDegrees(theta) + 180;

@@ -1,0 +1,19 @@
+name: Super-Linter
+
+on: push
+
+jobs:
+  super-lint:
+    name: Code Lint Check
+    runs-on:
+      - self-hosted
+      - Primary
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
