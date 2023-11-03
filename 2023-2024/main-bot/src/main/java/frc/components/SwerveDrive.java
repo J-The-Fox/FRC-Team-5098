@@ -41,14 +41,14 @@ public class SwerveDrive implements IComponent {
     {
 
         // Calabrate The NavX
-        if (CommonData.calibrate == true)
+        if (CommonData.getCalibrate() == true)
         {
-            CommonData.calibrate = false;
+            CommonData.setCalibrate(false);
             yawOffset            = ahrs.getYaw();
         }
 
         // Set to an if statement so the defensive code takes priority over driving
-        if (CommonData.battenDownTheHatches)
+        if (CommonData.getBattenDownTheHatches())
         {
             for (int i = 0; i < 4; i++)
             {
@@ -57,9 +57,9 @@ public class SwerveDrive implements IComponent {
         }
         else
         {
-            final var desiredTranslationSpeedX = CommonData.forwardSpeed * maximumSpeed; // This code uses '+x' as toward opposing alliance wall
-            final var desiredTranslationSpeedY = -CommonData.sideSpeed * maximumSpeed;   // This code uses '+y' as toward driver's right
-            final var desiredRotationSpeed     = -CommonData.desiredTurn * maximumRotation;
+            final var desiredTranslationSpeedX = CommonData.getForwardSpeed() * maximumSpeed; // This code uses '+x' as toward opposing alliance wall
+            final var desiredTranslationSpeedY = -CommonData.getSideSpeed() * maximumSpeed;   // This code uses '+y' as toward driver's right
+            final var desiredRotationSpeed     = -CommonData.getDesiredTurn() * maximumRotation;
             var       moduleStates             = kinematics.toSwerveModuleStates(ChassisSpeeds.fromFieldRelativeSpeeds(desiredTranslationSpeedX, desiredTranslationSpeedY, desiredRotationSpeed, Rotation2d.fromDegrees(ahrs.getYaw())));
 
             for (int i = 0; i < 4; i++)

@@ -84,10 +84,10 @@ public class Robot extends TimedRobot {
         // Update the controller values //
 
         // Update values for the Swerve Drive
-        CommonData.battenDownTheHatches = controller.getX();
-        CommonData.sideSpeed            = controller.getLeftStickX();
-        CommonData.forwardSpeed         = controller.getLeftStickY();
-        CommonData.desiredTurn          = Utility.snapToEdge(-controller.getRightStickX(), -1, 1, 0.9);
+        CommonData.setBattenDownTheHatches(controller.getX());
+        CommonData.setSideSpeed(controller.getLeftStickX());
+        CommonData.setForwardSpeed(controller.getLeftStickY());
+        CommonData.setDesiredTurn(Utility.snapToEdge(-controller.getRightStickX(), -1, 1, 0.9));
     }
 
     @Override
@@ -95,14 +95,14 @@ public class Robot extends TimedRobot {
 
         // "Turn off" all functions of the robot
 
-        CommonData.desiredTurn  = 0; // Set the turn speed to 0
-        CommonData.forwardSpeed = 0; // Set the drive speed to 0
+        CommonData.setDesiredTurn(0); // Set the turn speed to 0
+        CommonData.setForwardSpeed(0); // Set the drive speed to 0
 
         // Turn off the rumble on both controllers
         controller.rumbleOff();
         auxController.rumbleOff();
 
-        CommonData.counter = 0; // Set the counter to 0 (used in autonomous)
+        CommonData.setCounter(0); // Set the counter to 0 (used in autonomous)
     }
 
     @Override
