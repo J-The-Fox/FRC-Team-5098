@@ -1,9 +1,9 @@
 package frc;
 
 /**
-* Data used by other classes
+* Data used by other classes.
 * <p>
-* This is used to store data that needs to be accessed by multiple classes
+* This is used to store data that needs to be accessed by multiple classes.
 * </p>
 */
 public class CommonData {
@@ -11,38 +11,36 @@ public class CommonData {
     // Swerve Drive Variables //
 
     /**
-    * desiredTurn is the desired angle of the robot
+    * desiredTurn is the desired angle of the robot.
     */
     private static double desiredTurn;
 
     /**
-    * forwardSpeed is the desired forward and backward speed of the robot
+    * forwardSpeed is the desired forward and backward speed of the robot.
     */
     private static double forwardSpeed;
 
     /**
-    * sideSpeed is the desired left and right speed of the robot
+    * sideSpeed is the desired left and right speed of the robot.
     */
     private static double sideSpeed;
 
     /**
-    * battenDownTheHatches is used to determine if the robot should be
-      in defensive mode
+    * battenDownTheHatches is used to control the defensive stance.
     */
     private static boolean battenDownTheHatches;
 
     // NavX Variables //
 
     /**
-    * calibrate is used to determine if the NavX should be calibrated
+    * calibrate is used to determine if the NavX should be calibrated.
     */
     private static boolean calibrate;
 
     // Autonomous Varaibles //
 
     /**
-    * counter is used in the state machine to determine what state the robot
-      is in
+    * counter is used in the state machine to see what state the robot is in.
     */
     private static int counter;
 
@@ -58,7 +56,7 @@ public class CommonData {
 
 
     /**
-    * Method for returning desiredTurn
+    * Method for returning desiredTurn.
     * @return desiredTurn
     */
     public static double getDesiredTurn() {
@@ -66,15 +64,15 @@ public class CommonData {
     }
 
     /**
-     * Method for setting the desiredTurn
+     * Method for setting the desiredTurn.
      * @param value  value to set desiredTurn
      */
-    public final static void setDesiredTurn(double value) {
+    public final static void setDesiredTurn(final double value) {
         desiredTurn = value;
     }
 
     /**
-    * Method for returning forwardSpeed
+    * Method for returning forwardSpeed.
     * @return forwardSpeed
     */
     public static double getForwardSpeed() {
@@ -82,15 +80,15 @@ public class CommonData {
     }
 
     /**
-    * Method for setting forwardSpeed
+    * Method for setting forwardSpeed.
     * @param value  value to set forwardSpeed
     */
-    public final static void setForwardSpeed(double value) {
+    public static final void setForwardSpeed(final double value) {
         forwardSpeed = value;
     }
 
     /**
-    * Method for returning sideSpeed
+    * Method for returning sideSpeed.
     * @return sideSpeed
     */
     public static double getSideSpeed() {
@@ -98,15 +96,15 @@ public class CommonData {
     }
 
     /**
-    * Method for setting sideSpeed
+    * Method for setting sideSpeed.
     * @param value  value to set sideSpeed
     */
-    public final static void setSideSpeed(double value) {
+    public static final void setSideSpeed(final double value) {
         sideSpeed = value;
     }
 
     /**
-    * Method for returning battenDownTheHatches
+    * Method for returning battenDownTheHatches.
     * @return battenDownTheHatches
     */
     public static boolean getBattenDownTheHatches() {
@@ -114,15 +112,15 @@ public class CommonData {
     }
 
     /**
-    * Method for setting battenDownTheHatches
+    * Method for setting battenDownTheHatches.
     * @param value  value to set battenDownTheHatches
     */
-    public final static void setBattenDownTheHatches(boolean value) {
+    public static final void setBattenDownTheHatches(final boolean value) {
         battenDownTheHatches = value;
     }
 
     /**
-    * Method for returning calibrate
+    * Method for returning calibrate.
     * @return calibrate
     */
     public static boolean getCalibrate() {
@@ -130,15 +128,15 @@ public class CommonData {
     }
 
     /**
-    * Method for setting calibrate
+    * Method for setting calibrate.
     * @param value  value to set calibrate
     */
-    public final static void setCalibrate(boolean value) {
+    public static final void setCalibrate(final boolean value) {
         calibrate = value;
     }
 
     /**
-    * Method for returning counter
+    * Method for returning counter.
     * @return counter
     */
     public static int getCounter() {
@@ -146,10 +144,10 @@ public class CommonData {
     }
 
     /**
-    * Method for setting counter
+    * Method for setting counter.
     * @param value  value to set counter
     */
-    public final static void setCounter(int value) {
+    public static final void setCounter(final int value) {
         counter = value;
     }
 }
