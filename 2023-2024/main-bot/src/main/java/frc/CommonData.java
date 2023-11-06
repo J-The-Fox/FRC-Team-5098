@@ -6,7 +6,7 @@ package frc;
 * This is used to store data that needs to be accessed by multiple classes.
 * </p>
 */
-public class CommonData {
+public final class CommonData {
 
     // Swerve Drive Variables //
 
@@ -67,7 +67,7 @@ public class CommonData {
      * Method for setting the desiredTurn.
      * @param value  value to set desiredTurn
      */
-    public final static void setDesiredTurn(final double value) {
+    public static final void setDesiredTurn(final double value) {
         desiredTurn = value;
     }
 
