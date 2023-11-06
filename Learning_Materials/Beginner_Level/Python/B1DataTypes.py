@@ -1,6 +1,6 @@
 # Hello! this is the data types file. Here we will learn about the data types in python.
 
-# Data types are the type of data that we can store in a variable. There are many data types in python. Some of them are:
+# Data types are the types of data that we can store in a variable. Python contains many data types. Some of them are:
 # 1. int (any whole number)
 a_number = 1
 # 2. float (any decimal number)

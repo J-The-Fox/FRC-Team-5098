@@ -5,8 +5,8 @@ text = None
 
 if 5 > 2:  # This is an if statement, and it checks if 5 is greater than 2
     # If the condition is true, then this code will run
-    text = "value is greater than 2" 
-    # notice how this is indented, as opposed to 
+    text = "value is greater than 2"
+    # notice how this is indented, as opposed to
     # other lines we've created. This means that it anything indented
     # below the if statement is "inside" the if statement, and will run
 
