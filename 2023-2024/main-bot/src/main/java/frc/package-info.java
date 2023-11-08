@@ -1,9 +1,7 @@
-
 /**
- * Main package for the robot code.
+ * Main package for robot code.
  * <p>
- * This is a test currently being used to test the javadoc generation
- * and fix code linting issues.
+ * All code that is deployed to the robot would be located under this package.
  * </p>
  */
 package frc;
