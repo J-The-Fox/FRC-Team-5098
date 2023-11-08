@@ -1,100 +1,209 @@
 package frc.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
+
 import java.lang.Math;
 
+/**
+* This class is used to create an LogitechF310 controller object.
+* <p>
+* This class uses the {@code Joystick} class from the wpilibj library.
+* </p>
+* <p>
+* This uses a deadband that can be set if needed. This helps control drift.
+* This value can be in a range of 0 to 1. The higher the value, the more the
+* stick has to move to register. This value is set in the constructor and is
+* set alongside the controller ID. As a note: <i> The deadband is only applied
+* to the joystick axes. </i>
+* </p>
+*
+* @see PS4
+* @see Xbox
+*
+* @see edu.wpi.first.wpilibj.Joystick
+*/
 public class LogitechF310 {
 
-    // Imported From 2021-2022 code
-    // Edited to match new controllers
+    private Joystick controller;
+    private double deadBand;
 
-    private final int kIdButtonA           = 1;
-    private final int kIdButtonB           = 2;
-    private final int kIdButtonX           = 3;
-    private final int kIdButtonY           = 4;
-    private final int kIdButtonBumperLeft  = 5;
-    private final int kIdButtonBumperRight = 6;
-    private final int kIdAxisleftX         = 0;
-    private final int kIdAxisleftY         = 1;
-    private final int kIdAxisrightX        = 4;
-    private final int kIdAxisrightY        = 5;
-    private final int kIdlefttrigger       = 2;
-    private final int kIdrighttrigger      = 3;
-
-    private Joystick joystick;
-
-    // Set a deadband for the controller as our particular controller has some drift
-    public double deadBand(double value)
-    {
-        return Math.abs(value) < 0.2 ? 0 : value;
+    public LogitechF310(final int ID, final double deadBandValue) {
+        controller = new Joystick(ID);
+        deadBand = deadBandValue;
     }
 
-    public LogitechF310(int id)
-    {
-        joystick = new Joystick(id);
+    // Deadband Method //
+
+    /**
+    * Method for setting the deadband of the controller on the X and Y axes.
+    */
+    private double deadBand(double value) {
+        return Math.abs(value) < deadBand ? 0 : value;
     }
 
-    public boolean getA()
-    {
-        return joystick.getRawButton(kIdButtonA);
+    // Joystick Methods //
+
+    /**
+    * Method for returning the X value of the left joystick.
+    * @return  X value of the left joystick
+    *
+    * @see LogitechF310#getRightX
+    * @see LogitechF310#getRightY
+    * @see LogitechF310#getLeftY
+    */
+    public double getLeftX() {
+        return deadBand(controller.getRawAxis(0));
     }
 
-    public boolean getB()
-    {
-        return joystick.getRawButton(kIdButtonB);
+    /**
+     * Method for returning the Y value of the left joystick.
+     * @return  Y value of the left joystick
+     * 
+     * @see LogitechF310#getRightX
+     * @see LogitechF310#getRightY
+     * @see LogitechF310#getLeftX
+     */
+    public double getLeftY() {
+        return deadBand(controller.getRawAxis(1));
     }
 
-    public boolean getX()
-    {
-        return joystick.getRawButton(kIdButtonX);
+    /**
+     * Method for returning the X value of the right joystick.
+     * @return  X value of the right joystick
+     * 
+     * @see LogitechF310#getRightY
+     * @see LogitechF310#getLeftX
+     * @see LogitechF310#getLeftY
+     */
+    public double getRightX() {
+        return deadBand(controller.getRawAxis(4));
     }
 
-    public boolean getY()
-    {
-        return joystick.getRawButton(kIdButtonY);
+    /**
+     * Method for returning the Y value of the right joystick.
+     * @return  Y value of the right joystick
+     * 
+     * @see LogitechF310#getRightX
+     * @see LogitechF310#getLeftX
+     * @see LogitechF310#getLeftY
+     */
+    public double getRightY() {
+        return deadBand(controller.getRawAxis(5));
     }
 
-    public boolean getLeftBumper()
-    {
-        return joystick.getRawButton(kIdButtonBumperLeft);
+    // Trigger Methods //
+
+    /**
+     * Method for returning the value of the left trigger.
+     * @return  Value of the left trigger
+     * 
+     * @see LogitechF310#getRightTrigger
+     */
+    public double getLeftTrigger() {
+        return deadBand(controller.getRawAxis(2));
     }
 
-    public boolean getRightBumper()
-    {
-        return joystick.getRawButton(kIdButtonBumperRight);
+    /**
+     * Method for returning the value of the right trigger.
+     * @return  Value of the right trigger
+     * 
+     * @see LogitechF310#getLeftTrigger
+     */
+    public double getRightTrigger() {
+        return deadBand(controller.getRawAxis(3));
     }
 
-    public double getLeftStickX()
-    {
-        return deadBand(joystick.getRawAxis(kIdAxisleftX));
+    // Button Methods //
+
+    /**
+     * Method for returning the value of the A button.
+     * @return  Value of the A button
+     * 
+     * @see LogitechF310#getBButton
+     * @see LogitechF310#getXButton
+     * @see LogitechF310#getYButton
+     */
+    public boolean getAButton() {
+        return controller.getRawButton(1);
     }
 
-    public double getLeftStickY()
-    {
-        return deadBand(joystick.getRawAxis(kIdAxisleftY));
+    /**
+     * Method for returning the value of the B button.
+     * @return  Value of the B button
+     * 
+     * @see LogitechF310#getAButton
+     * @see LogitechF310#getXButton
+     * @see LogitechF310#getYButton
+     */
+    public boolean getBButton() {
+        return controller.getRawButton(2);
     }
 
-    public double getRightStickX()
-    {
-        return deadBand(joystick.getRawAxis(kIdAxisrightX));
+    /**
+     * Method for returning the value of the X button.
+     * @return  Value of the X button
+     * 
+     * @see LogitechF310#getAButton
+     * @see LogitechF310#getBButton
+     * @see LogitechF310#getYButton
+     */
+    public boolean getXButton() {
+        return controller.getRawButton(3);
     }
 
-    public double getRightStickY()
-    {
-        return deadBand(joystick.getRawAxis(kIdAxisrightY));
+    /**
+     * Method for returning the value of the Y button.
+     * @return  Value of the Y button
+     * 
+     * @see LogitechF310#getAButton
+     * @see LogitechF310#getBButton
+     * @see LogitechF310#getXButton
+     */
+    public boolean getYButton() {
+        return controller.getRawButton(4);
     }
 
-    public double getLeftTrigger()
-    {
-        return joystick.getRawAxis(kIdlefttrigger);
+    /**
+     * Method for returning the value of the back button.
+     * @return  Value of the back button
+     * 
+     * @see LogitechF310#getStartButton
+     */
+    public boolean getBackButton() {
+        return controller.getRawButton(7);
     }
 
-    public double getRightTrigger()
-    {
-        return joystick.getRawAxis(kIdrighttrigger);
+    /**
+     * Method for returning the value of the start button.
+     * @return  Value of the start button
+     * 
+     * @see LogitechF310#getBackButton
+     */
+    public boolean getStartButton() {
+        return controller.getRawButton(8);
     }
 
-    // Swapped dPad to match the other controllers
+    /**
+     * Method for returning the value of the left bumper.
+     * @return  Value of the left bumper
+     * 
+     * @see LogitechF310#getRightBumper
+     */
+    public boolean getLeftBumper() {
+        return controller.getRawButton(5);
+    }
+
+    /**
+     * Method for returning the value of the right bumper.
+     * @return  Value of the right bumper
+     * 
+     * @see LogitechF310#getLeftBumper
+     */
+    public boolean getRightBumper() {
+        return controller.getRawButton(6);
+    }
+
+    // D-Pad Methods //
 
     public enum dPad {
         up,
@@ -108,41 +217,36 @@ public class LogitechF310 {
         none
     }
 
-    public dPad getPad()
-    {
-        switch (joystick.getPOV())
-        {
-        case 0:
-            return dPad.up;
-
-        case 360:
-            return dPad.up;
-
-        case 90:
-            return dPad.right;
-
-        case 180:
-            return dPad.down;
-
-        case 270:
-            return dPad.left;
-
-        case 45:
-            return dPad.upright;
-
-        case 135:
-            return dPad.downright;
-
-        case 225:
-            return dPad.downleft;
-
-        case 315:
-            return dPad.upleft;
-
-        default:
-            return dPad.none;
+    /**
+    * Method for returning the value of the D-Pad.
+    * @return  value of the D-Pad
+    * 
+    * @see LogitechF310.dPad
+    */
+    public dPad getDPad() {
+        switch (controller.getPOV()) {
+            case 0:
+                return dPad.up;
+            case 45:
+                return dPad.upright;
+            case 90:
+                return dPad.right;
+            case 135:
+                return dPad.downright;
+            case 180:
+                return dPad.down;
+            case 225:
+                return dPad.downleft;
+            case 270:
+                return dPad.left;
+            case 315:
+                return dPad.upleft;
+            case 360:
+                return dPad.up;
+            default:
+                return dPad.none;
         }
-
-        // No rumble support :(
     }
+
+    // This controller does not have rumble functionality :(
 }
