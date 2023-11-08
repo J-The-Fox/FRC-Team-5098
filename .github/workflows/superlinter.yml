@@ -17,9 +17,12 @@ jobs:
         uses: github/super-linter@v4
         env:
           # Testing multiple folders and files
-          # I don't think this will work but I'm not sure how else to add multiple folders / files
-          # Might have to do some more researching on this
-          FILTER_REGEX_EXCLUDE: .*2022-2023/.*
-          FILTER_REGEX_EXCLUDE: .*2022-2023/.*
+          # Files to ignore:
+          # - gradlew and .gradlew files as these are auto generated and should not be changed
+          # - WPILib-License.md as this is just a license file
+          # Folders to ignore:
+          # - 2022-2023 as this is old code and trying to change it could break it
+          # .*2022-2023/.* 
+          FILTER_REGEX_EXCLUDE: .*gradlew
           DEFAULT_BRANCH: Workflows-test
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
