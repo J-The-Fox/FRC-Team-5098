@@ -49,7 +49,7 @@ print("house 2 is " + newHouse2.color + " and " + newHouse2.size)
 # Take, for example, a function that changes the color of the house
 
 
-class anotherBlueprintForHouse():
+class anotherBlueprintForHouse:
     def __init__(self, color, size):
         self.color = color
         self.size = size

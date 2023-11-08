@@ -12,7 +12,7 @@ def testfunction():
 # testfunction()
 # print(
 #     x
-# )  
+# )
 # If the above code was ran, this will cause an error, because x is not accessible outside of the function
 
 # there are two ways around this

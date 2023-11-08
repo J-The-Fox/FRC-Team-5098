@@ -54,7 +54,6 @@ public final class CommonData {
 
     // Accesor Methods //
 
-
     /**
     * Method for returning desiredTurn.
     * @return desiredTurn
@@ -67,7 +66,7 @@ public final class CommonData {
      * Method for setting the desiredTurn.
      * @param value  value to set desiredTurn
      */
-    public static final void setDesiredTurn(final double value) {
+    public static void setDesiredTurn(final double value) {
         desiredTurn = value;
     }
 
@@ -83,7 +82,7 @@ public final class CommonData {
     * Method for setting forwardSpeed.
     * @param value  value to set forwardSpeed
     */
-    public static final void setForwardSpeed(final double value) {
+    public static void setForwardSpeed(final double value) {
         forwardSpeed = value;
     }
 
@@ -99,7 +98,7 @@ public final class CommonData {
     * Method for setting sideSpeed.
     * @param value  value to set sideSpeed
     */
-    public static final void setSideSpeed(final double value) {
+    public static void setSideSpeed(final double value) {
         sideSpeed = value;
     }
 
@@ -115,7 +114,7 @@ public final class CommonData {
     * Method for setting battenDownTheHatches.
     * @param value  value to set battenDownTheHatches
     */
-    public static final void setBattenDownTheHatches(final boolean value) {
+    public static void setBattenDownTheHatches(final boolean value) {
         battenDownTheHatches = value;
     }
 
@@ -131,7 +130,7 @@ public final class CommonData {
     * Method for setting calibrate.
     * @param value  value to set calibrate
     */
-    public static final void setCalibrate(final boolean value) {
+    public static void setCalibrate(final boolean value) {
         calibrate = value;
     }
 
@@ -147,7 +146,7 @@ public final class CommonData {
     * Method for setting counter.
     * @param value  value to set counter
     */
-    public static final void setCounter(final int value) {
+    public static void setCounter(final int value) {
         counter = value;
     }
 }

@@ -2,7 +2,7 @@
 # you can put it in a function and call that function
 # whenever you need to use that code.
 
-# To create the function, you need to use the keyword "def" 
+# To create the function, you need to use the keyword "def"
 # followed by the name of the function and then a set of parentheses.
 def testfunction():
     print("This is a function being called!")
