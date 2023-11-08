@@ -25,5 +25,5 @@ jobs:
           # - 2022-2023
           # - vendordeps
           FILTER_REGEX_EXCLUDE: ".*2022-2023/.*|.*vendordeps/.*|.*gradlew|.*.gradle|.*WPILib-License.md.*"
-          DEFAULT_BRANCH: Workflows-test
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
