@@ -1,4 +1,4 @@
-# Sometimes you need to convert data from one type to another to 
+# Sometimes you need to convert data from one type to another to
 # perform certain operations or to manipulate the data in a certain way.
 
 # for example, let's say you want to add these to variables together
@@ -8,7 +8,7 @@ strVariable = " is the number of fingers I have"
 # as you can see, you can't add an integer and a string together
 
 # so you need to convert the integer to a string
-addedVariable = str(intVariable) + strVariable 
+addedVariable = str(intVariable) + strVariable
 
 print(addedVariable)
 

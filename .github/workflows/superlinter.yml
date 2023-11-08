@@ -1,10 +1,11 @@
+---
 name: Super-Linter
 
 on: push
 
 jobs:
   super-lint:
-    name: Code Lint Check
+    name: Super-Linter
     runs-on:
       - self-hosted
       - Primary
@@ -15,5 +16,7 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
+          # Exclude the 2022-2023 folder.
+          FILTER_REGEX_EXCLUDE: .*2022-2023/.*
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
