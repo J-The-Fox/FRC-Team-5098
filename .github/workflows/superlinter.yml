@@ -22,7 +22,8 @@ jobs:
           # - WPILib-License.md as this is just a license file
           # Folders to ignore:
           # - 2022-2023 as this is old code and trying to change it could break it
-          # .*2022-2023/.* 
-          FILTER_REGEX_EXCLUDE: .*gradlew
+          #
+          # This *may* work but I can't find much documentation for using multiple folders and files for FILTER_REGEX_EXCLUDE
+          FILTER_REGEX_EXCLUDE: ".*2022-2023/.*|.*gradlew|.*WPILib-License.md.*"
           DEFAULT_BRANCH: Workflows-test
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
