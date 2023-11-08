@@ -16,7 +16,7 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
-          # Exclude the 2022-2023 folder.
-          FILTER_REGEX_EXCLUDE: .*2022-2023/.*
+          # Testing multiple folders and files
+          FILTER_REGEX_EXCLUDE: .*2022-2023/.*, .*.gradle, .*gradlew, .*gradlew.bat
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

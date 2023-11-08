@@ -1,4 +1,5 @@
-name: WPILib Build
+---
+name: Build
 
 on: push
 
@@ -12,7 +13,7 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
             
-            - name: WPILib Build 2023-2024
+            - name: Build 2023-2024
             # Set the working directory so gradlew and WPILib are in the right folder
               working-directory: ./2023-2024/main-bot
             # Run gradlew to build the robot code with java home being what it is set to during manual runtime
@@ -26,8 +27,8 @@ jobs:
             # Check out the code so the action can use it
             - name: Checkout code
               uses: actions/checkout@v4
-
-            - name: WPILib Build 2022-2023
+              
+            - name: Build 2022-2023
               working-directory: ./2022-2023/main-bot
               run: ./gradlew build
             
