@@ -17,6 +17,6 @@ jobs:
         uses: github/super-linter@v4
         env:
           # Testing multiple folders and files
-          FILTER_REGEX_EXCLUDE: .*2022-2023/.*, .*.gradle, .*gradlew, .*gradlew.bat
+          FILTER_REGEX_EXCLUDE: .*2022-2023/.* .*.gradle .*gradlew .*gradlew.bat
           DEFAULT_BRANCH: Workflows-test
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
