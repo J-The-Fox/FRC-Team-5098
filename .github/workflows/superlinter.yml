@@ -18,12 +18,12 @@ jobs:
         env:
           # Testing multiple folders and files
           # Files to ignore:
-          # - gradlew and .gradlew files as these are auto generated and should not be changed
-          # - WPILib-License.md as this is just a license file
+          # - gradlew
+          # - .gradle
+          # - WPILib-License.md
           # Folders to ignore:
-          # - 2022-2023 as this is old code and trying to change it could break it
-          #
-          # This *may* work but I can't find much documentation for using multiple folders and files for FILTER_REGEX_EXCLUDE
-          FILTER_REGEX_EXCLUDE: ".*2022-2023/.*|.*gradlew|.*WPILib-License.md.*"
+          # - 2022-2023
+          # - vendordeps
+          FILTER_REGEX_EXCLUDE: ".*2022-2023/.*|.*vendordeps/.*|.*gradlew|.*.gradle|.*WPILib-License.md.*"
           DEFAULT_BRANCH: Workflows-test
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
