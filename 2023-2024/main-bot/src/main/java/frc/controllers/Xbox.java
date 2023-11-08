@@ -37,9 +37,17 @@ public class Xbox {
     // it's still here just in case one might develop drift
 
     /**
-     * Method for setting the deadband of the controller on the X and Y axes.
-     */
-    private double deadBand(double value) {
+    * Method for setting the deadband of the controller on the X and Y axes.
+    * <p>
+    * This sets a threshold the joystick must pass before registering a value.
+    * This value can be in a range of 0 to 1. The higher the value,
+    * the more the joystick has to move to register.
+    * </p>
+    * @return  Deadbanded value
+    *
+    * @param value  Value to be deadbanded
+    */
+    private double deadBand(final double value) {
         return Math.abs(value) < deadBand ? 0 : value;
     }
 
@@ -52,7 +60,6 @@ public class Xbox {
     * @see Xbox#getRightX
     * @see Xbox#getRightY
     * @see Xbox#getLeftY
-    *
     */
     public double getLeftX() {
         return deadBand(controller.getLeftX());
@@ -65,7 +72,6 @@ public class Xbox {
     * @see Xbox#getRightX
     * @see Xbox#getRightY
     * @see Xbox#getLeftX
-    *
     */
     public double getLeftY() {
         return deadBand(controller.getLeftY());
@@ -78,7 +84,6 @@ public class Xbox {
     * @see Xbox#getRightY
     * @see Xbox#getLeftX
     * @see Xbox#getLeftY
-    *
     */
     public double getRightX() {
         return deadBand(controller.getRightX());
@@ -123,7 +128,7 @@ public class Xbox {
     /**
     * Method for returning the value of the A button.
     * @return  value of the A button
-    *  
+    *
     * @see Xbox#getBButton
     * @see Xbox#getXButton
     * @see Xbox#getYButton
@@ -135,7 +140,7 @@ public class Xbox {
     /**
     * Method for returning the value of the B button.
     * @return  value of the B button
-    *  
+    *
     * @see Xbox#getAButton
     * @see Xbox#getXButton
     * @see Xbox#getYButton
@@ -147,7 +152,7 @@ public class Xbox {
     /**
     * Method for returning the value of the X button.
     * @return  value of the X button
-    *  
+    *
     * @see Xbox#getAButton
     * @see Xbox#getBButton
     * @see Xbox#getYButton
@@ -159,7 +164,7 @@ public class Xbox {
     /**
     * Method for returning the value of the Y button.
     * @return  value of the Y button
-    *  
+    *
     * @see Xbox#getAButton
     * @see Xbox#getBButton
     * @see Xbox#getXButton
@@ -171,7 +176,7 @@ public class Xbox {
     /**
     * Method for returning the value of the start button.
     * @return  value of the start button
-    *  
+    *
     * @see Xbox#getBackButton
     */
     public boolean getStartButton() {
@@ -191,7 +196,7 @@ public class Xbox {
     /**
     * Method for returning the value of the left bumper.
     * @return  value of the left bumper
-    *  
+    *
     * @see Xbox#getRightBumper
     */
     public boolean getLeftBumper() {
@@ -201,7 +206,7 @@ public class Xbox {
     /**
     * Method for returning the value of the right bumper.
     * @return  value of the right bumper
-    *  
+    *
     * @see Xbox#getLeftBumper
     */
     public boolean getRightBumper() {
@@ -211,7 +216,7 @@ public class Xbox {
     /**
     * Method for returning the value of the left stick button.
     * @return  value of the left stick button
-    * 
+    *
     * @see Xbox#getRightStickButton
     */
     public boolean getLeftStickButton() {
@@ -221,7 +226,7 @@ public class Xbox {
     /**
     * Method for returning the value of the right stick button.
     * @return  value of the right stick button
-    * 
+    *
     * @see Xbox#getLeftStickButton
     */
     public boolean getRightStickButton() {
@@ -230,46 +235,90 @@ public class Xbox {
 
     // D-Pad Methods //
 
-    public enum dPad {
+    public enum DPad {
+        /**
+        * Up on the D-Pad
+        */
         up,
+
+        /**
+        * Down on the D-Pad
+        */ 
         down,
+
+        /**
+        * Right on the D-Pad
+        */
         left,
+
+        /**
+        * Left on the D-Pad
+        */
         right,
+
+        /**
+        * Up-Right on the D-Pad
+        */
         upright,
+
+        /**
+        * Up-Left on the D-Pad
+        */
         upleft,
+
+        /**
+        * Down-Right on the D-Pad
+        */
         downright,
+
+        /**
+        * Down-Left on the D-Pad
+        */
         downleft,
+
+        /**
+        * No direction on the D-Pad
+        */
         none
     }
+
+    private final int DPAD_UPRIGHT = 45;
+    private final int DPAD_RIGHT = 90;
+    private final int DPAD_DOWNRIGHT = 135;
+    private final int DPAD_DOWN = 180;
+    private final int DPAD_DOWNLEFT = 225;
+    private final int DPAD_LEFT = 270;
+    private final int DPAD_UPLEFT = 315;
+    private final int DPAD_UP = 360;
 
     /**
     * Method for returning the value of the D-Pad.
     * @return  value of the D-Pad
     * 
-    * @see Xbox.dPad
+    * @see Xbox.DPad
     */
-    public dPad getDPad() {
+    public DPad getDPad() {
         switch (controller.getPOV()) {
             case 0:
-                return dPad.up;
-            case 45:
-                return dPad.upright;
-            case 90:
-                return dPad.right;
-            case 135:
-                return dPad.downright;
-            case 180:
-                return dPad.down;
-            case 225:
-                return dPad.downleft;
-            case 270:
-                return dPad.left;
-            case 315:
-                return dPad.upleft;
-            case 360:
-                return dPad.up;
+                return DPad.up;
+            case DPAD_UPRIGHT:
+                return DPad.upright;
+            case DPAD_RIGHT:
+                return DPad.right;
+            case DPAD_DOWNRIGHT:
+                return DPad.downright;
+            case DPAD_DOWN:
+                return DPad.down;
+            case DPAD_DOWNLEFT:
+                return DPad.downleft;
+            case DPAD_LEFT:
+                return DPad.left;
+            case DPAD_UPLEFT:
+                return DPad.upleft;
+            case DPAD_UP:
+                return DPad.up;
             default:
-                return dPad.none;
+                return DPad.none;
         }
     }
 
@@ -282,7 +331,7 @@ public class Xbox {
     * 
     * @see edu.wpi.first.wpilibj.GenericHID.RumbleType
     */
-    public void setRumble(RumbleType type, double value) {
+    public void setRumble(final RumbleType type, final double value) {
         controller.setRumble(type, value);
     }
 }

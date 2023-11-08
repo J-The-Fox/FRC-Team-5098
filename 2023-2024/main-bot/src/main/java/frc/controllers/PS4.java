@@ -26,8 +26,8 @@ public class PS4 {
     private PS4Controller controller;
     private double deadBand;
 
-    public PS4(final int ID, final double deadBandValue) {
-        controller = new PS4Controller(ID);
+    public PS4(final int id, final double deadBandValue) {
+        controller = new PS4Controller(id);
         deadBand = deadBandValue;
     }
 
@@ -38,8 +38,16 @@ public class PS4 {
 
     /**
     * Method for setting the deadband of the controller on the X and Y axes.
+    * <p>
+    * This sets a threshold the joystick must pass before registering a value.
+    * This value can be in a range of 0 to 1. The higher the value,
+    * the more the joystick has to move to register.
+    * </p>
+    * @return  Deadbanded value
+    *
+    * @param value  Value to be deadbanded
     */
-    private double deadBand(double value) {
+    private double deadBand(final double value) {
         return Math.abs(value) < deadBand ? 0 : value;
     }
 
@@ -52,7 +60,6 @@ public class PS4 {
     * @see PS4#getRightX
     * @see PS4#getRightY
     * @see PS4#getLeftY
-    *
     */
     public double getLeftX() {
         return deadBand(controller.getLeftX());
@@ -65,7 +72,6 @@ public class PS4 {
     * @see PS4#getRightX
     * @see PS4#getRightY
     * @see PS4#getLeftX
-    *
     */
     public double getLeftY() {
         return deadBand(controller.getLeftY());
@@ -78,7 +84,6 @@ public class PS4 {
     * @see PS4#getLeftX
     * @see PS4#getRightY
     * @see PS4#getLeftY
-    *
     */
     public double getRightX() {
         return deadBand(controller.getRightX());
@@ -101,7 +106,7 @@ public class PS4 {
     /**
     * Method for returning the value of the left trigger.
     * @return  value of the left trigger
-    * 
+    *
     * @see PS4#getRightTrigger
     */
     public double getLeftTrigger() {
@@ -111,7 +116,7 @@ public class PS4 {
     /**
     * Method for returning the value of the right trigger.
     * @return  value of the right trigger
-    * 
+    *
     * @see PS4#getLeftTrigger
     */
     public double getRightTrigger() {
@@ -123,7 +128,7 @@ public class PS4 {
     /**
     * Method for returning the value of the X button.
     * @return  value of the X button
-    * 
+    *
     * @see PS4#getSquareButton
     * @see PS4#getCircleButton
     * @see PS4#getTriangleButton
@@ -139,7 +144,7 @@ public class PS4 {
     /**
     * Method for returning the value of the Square button.
     * @return  value of the Square button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getCircleButton
     * @see PS4#getTriangleButton
@@ -155,7 +160,7 @@ public class PS4 {
     /**
     * Method for returning the value of the Circle button.
     * @return  value of the Circle button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getSquareButton
     * @see PS4#getTriangleButton
@@ -171,7 +176,7 @@ public class PS4 {
     /**
     * Method for returning the value of the Triangle button.
     * @return  value of the Triangle button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getSquareButton
     * @see PS4#getCircleButton
@@ -187,7 +192,7 @@ public class PS4 {
     /**
     * Method for returning the value of the Share button.
     * @return  value of the Share button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getSquareButton
     * @see PS4#getCircleButton
@@ -203,7 +208,7 @@ public class PS4 {
     /**
     * Method for returning the value of the Options button.
     * @return  value of the Options button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getSquareButton
     * @see PS4#getCircleButton
@@ -219,7 +224,7 @@ public class PS4 {
     /**
     * Method for returning the value of the PlayStation button.
     * @return  value of the PlayStation button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getSquareButton
     * @see PS4#getCircleButton
@@ -234,8 +239,8 @@ public class PS4 {
 
     /**
     * Method for returning the value of the left bumper.
-    * @return
-    * 
+    * @return  value of the left bumper
+    *
     * @see PS4#getRightBumper
     */
     public boolean getLeftBumper() {
@@ -244,8 +249,8 @@ public class PS4 {
 
     /**
     * Method for returning the value of the right bumper.
-    * @return
-    * 
+    * @return  value of the right bumper
+    *
     * @see PS4#getLeftBumper
     */
     public boolean getRightBumper() {
@@ -253,17 +258,21 @@ public class PS4 {
     }
 
     /**
-     * Method for returning the value of the left joystick button.
-     * @return
-     */
+    * Method for returning the value of the left joystick button.
+    * @return  value of the left joystick button
+    *
+    * @see PS4#getRightJoystickButton
+    */
     public boolean getLeftJoystickButton() {
         return controller.getL3Button();
     }
 
     /**
-     * Method for returning the value of the right joystick button.
-     * @return
-     */
+    * Method for returning the value of the right joystick button.
+    * @return  value of the right joystick button
+    *
+    * @see PS4#getLeftJoystickButton
+    */
     public boolean getRightJoystickButton() {
         return controller.getR3Button();
     }
@@ -273,7 +282,7 @@ public class PS4 {
     /**
     * Method for returning the value of the Touchpad button.
     * @return  value of the Touchpad button
-    * 
+    *
     * @see PS4#getXButton
     * @see PS4#getSquareButton
     * @see PS4#getCircleButton
@@ -295,46 +304,90 @@ public class PS4 {
 
     // D-Pad Methods //
 
-    public enum dPad {
+    public enum DPad {
+        /**
+        * Up on the D-Pad
+        */
         up,
+
+        /**
+        * Down on the D-Pad
+        */ 
         down,
+
+        /**
+        * Right on the D-Pad
+        */
         left,
+
+        /**
+        * Left on the D-Pad
+        */
         right,
+
+        /**
+        * Up-Right on the D-Pad
+        */
         upright,
+
+        /**
+        * Up-Left on the D-Pad
+        */
         upleft,
+
+        /**
+        * Down-Right on the D-Pad
+        */
         downright,
+
+        /**
+        * Down-Left on the D-Pad
+        */
         downleft,
+
+        /**
+        * No direction on the D-Pad
+        */
         none
     }
+
+    private final int DPAD_UPRIGHT = 45;
+    private final int DPAD_RIGHT = 90;
+    private final int DPAD_DOWNRIGHT = 135;
+    private final int DPAD_DOWN = 180;
+    private final int DPAD_DOWNLEFT = 225;
+    private final int DPAD_LEFT = 270;
+    private final int DPAD_UPLEFT = 315;
+    private final int DPAD_UP = 360;
 
     /**
     * Method for returning the value of the D-Pad.
     * @return  value of the D-Pad
     * 
-    * @see PS4.dPad
+    * @see PS4.DPad
     */
-    public dPad getDPad() {
+    public DPad getDPad() {
         switch (controller.getPOV()) {
             case 0:
-                return dPad.up;
-            case 45:
-                return dPad.upright;
-            case 90:
-                return dPad.right;
-            case 135:
-                return dPad.downright;
-            case 180:
-                return dPad.down;
-            case 225:
-                return dPad.downleft;
-            case 270:
-                return dPad.left;
-            case 315:
-                return dPad.upleft;
-            case 360:
-                return dPad.up;
+                return DPad.up;
+            case DPAD_UPRIGHT:
+                return DPad.upright;
+            case DPAD_RIGHT:
+                return DPad.right;
+            case DPAD_DOWNRIGHT:
+                return DPad.downright;
+            case DPAD_DOWN:
+                return DPad.down;
+            case DPAD_DOWNLEFT:
+                return DPad.downleft;
+            case DPAD_LEFT:
+                return DPad.left;
+            case DPAD_UPLEFT:
+                return DPad.upleft;
+            case DPAD_UP:
+                return DPad.up;
             default:
-                return dPad.none;
+                return DPad.none;
         }
     }
 
@@ -347,7 +400,7 @@ public class PS4 {
     * 
     * @see edu.wpi.first.wpilibj.GenericHID.RumbleType
     */
-    public void setRumble(RumbleType type, double value) {
+    public void setRumble(final RumbleType type, final double value) {
         controller.setRumble(type, value);
     }    
 }
