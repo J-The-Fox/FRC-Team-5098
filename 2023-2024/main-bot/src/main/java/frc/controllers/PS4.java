@@ -306,64 +306,95 @@ public class PS4 {
 
     public enum DPad {
         /**
-        * Up on the D-Pad
+        * Up on the D-Pad.
         */
         up,
 
         /**
-        * Down on the D-Pad
+        * Down on the D-Pad.
         */ 
         down,
 
         /**
-        * Right on the D-Pad
+        * Right on the D-Pad.
         */
         left,
 
         /**
-        * Left on the D-Pad
+        * Left on the D-Pad.
         */
         right,
 
         /**
-        * Up-Right on the D-Pad
+        * Up-Right on the D-Pad.
         */
         upright,
 
         /**
-        * Up-Left on the D-Pad
+        * Up-Left on the D-Pad.
         */
         upleft,
 
         /**
-        * Down-Right on the D-Pad
+        * Down-Right on the D-Pad.
         */
         downright,
 
         /**
-        * Down-Left on the D-Pad
+        * Down-Left on the D-Pad.
         */
         downleft,
 
         /**
-        * No direction on the D-Pad
+        * No direction on the D-Pad.
         */
         none
     }
 
-    private final int DPAD_UPRIGHT = 45;
-    private final int DPAD_RIGHT = 90;
-    private final int DPAD_DOWNRIGHT = 135;
-    private final int DPAD_DOWN = 180;
-    private final int DPAD_DOWNLEFT = 225;
-    private final int DPAD_LEFT = 270;
-    private final int DPAD_UPLEFT = 315;
-    private final int DPAD_UP = 360;
+    /**
+    * Upright D-Pad POV value.
+    */
+    private static final int DPAD_UPRIGHT = 45;
+
+    /**
+    * Right D-Pad POV value.
+    */
+    private static final int DPAD_RIGHT = 90;
+
+    /**
+    * Downright D-Pad POV value.
+    */
+    private static final int DPAD_DOWNRIGHT = 135;
+
+    /**
+    * Down POV D-Pad value.
+    */
+    private static final int DPAD_DOWN = 180;
+
+    /**
+    * Downleft D-Pad POV value.
+    */
+    private static final int DPAD_DOWNLEFT = 225;
+
+    /**
+    * Left D-Pad POV value.
+    */
+    private static final int DPAD_LEFT = 270;
+
+    /**
+    * Upleft D-Pad POV value.
+    */
+    private static final int DPAD_UPLEFT = 315;
+
+    /**
+    * Up D-Pad POV value.
+    */
+    private static final int DPAD_UP = 360;
 
     /**
     * Method for returning the value of the D-Pad.
     * @return  value of the D-Pad
-    * 
+    *
     * @see PS4.DPad
     */
     public DPad getDPad() {
@@ -397,10 +428,10 @@ public class PS4 {
     * Method for setting the rumble of the controller.
     * @param type   type of rumble to set
     * @param value  value to set the rumble to
-    * 
+    *
     * @see edu.wpi.first.wpilibj.GenericHID.RumbleType
     */
     public void setRumble(final RumbleType type, final double value) {
         controller.setRumble(type, value);
-    }    
+    }
 }

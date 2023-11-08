@@ -2,8 +2,6 @@ package frc.controllers;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-
-
 /**
 * This class is used to create an LogitechF310 controller object.
 * <p>
@@ -26,21 +24,75 @@ public class LogitechF310 {
 
     // Button IDs //
 
-    private final int JOYSTICK_LEFT_X = 0;
-    private final int JOYSTICK_LEFT_Y = 1;
-    private final int TRIGGER_LEFT = 2;
-    private final int TRIGGER_RIGHT = 3;
-    private final int JOYSTICK_RIGHT_X = 4;
-    private final int JOYSTICK_RIGHT_Y = 5;
+    /**
+    * The axis ID for the left joystick x.
+    */
+    private static final int JOYSTICK_LEFT_X = 0;
 
-    private final int BUTTON_A = 1;
-    private final int BUTTON_B = 2;
-    private final int BUTTON_X = 3;
-    private final int BUTTON_Y = 4;
-    private final int BUTTON_LEFT_BUMPER = 5;
-    private final int BUTTON_RIGHT_BUMPER = 6;
-    private final int BUTTON_START = 7;
-    private final int BUTTON_BACK = 8;
+    /**
+     * The axis ID for the left joystick y.
+     */
+    private static final int JOYSTICK_LEFT_Y = 1;
+
+    /**
+     * The axis ID for the left trigger.
+     */
+    private static final int TRIGGER_LEFT = 2;
+
+    /**
+     * The axis ID for the right trigger.
+     */
+    private static final int TRIGGER_RIGHT = 3;
+
+    /**
+     * The axis ID for the right joystick x.
+     */
+    private static final int JOYSTICK_RIGHT_X = 4;
+
+    /**
+     * The axis ID for the right joystick y.
+     */
+    private static final int JOYSTICK_RIGHT_Y = 5;
+
+    /**
+     * The button ID for the A button.
+     */
+    private static final int BUTTON_A = 1;
+
+    /**
+     * The button ID for the B button.
+     */
+    private static final int BUTTON_B = 2;
+
+    /**
+     * The button ID for the X button.
+     */
+    private static final int BUTTON_X = 3;
+
+    /**
+     * The button ID for the Y button.
+     */
+    private static final int BUTTON_Y = 4;
+
+    /**
+     * The button ID for the left bumper.
+     */
+    private static final int BUTTON_LEFT_BUMPER = 5;
+
+    /**
+     * The button ID for the right bumper.
+     */
+    private static final int BUTTON_RIGHT_BUMPER = 6;
+
+    /**
+     * The button ID for the start button.
+     */
+    private static final int BUTTON_START = 7;
+
+    /**
+     * The button ID for the back button.
+     */
+    private static final int BUTTON_BACK = 8;
 
 
     /**
@@ -244,64 +296,95 @@ public class LogitechF310 {
 
     public enum DPad {
         /**
-        * Up on the D-Pad
+        * Up on the D-Pad.
         */
         up,
 
         /**
-        * Down on the D-Pad
+        * Down on the D-Pad.
         */ 
         down,
 
         /**
-        * Right on the D-Pad
+        * Right on the D-Pad.
         */
         left,
 
         /**
-        * Left on the D-Pad
+        * Left on the D-Pad.
         */
         right,
 
         /**
-        * Up-Right on the D-Pad
+        * Up-Right on the D-Pad.
         */
         upright,
 
         /**
-        * Up-Left on the D-Pad
+        * Up-Left on the D-Pad.
         */
         upleft,
 
         /**
-        * Down-Right on the D-Pad
+        * Down-Right on the D-Pad.
         */
         downright,
 
         /**
-        * Down-Left on the D-Pad
+        * Down-Left on the D-Pad.
         */
         downleft,
 
         /**
-        * No direction on the D-Pad
+        * No direction on the D-Pad.
         */
         none
     }
 
-    private final int DPAD_UPRIGHT = 45;
-    private final int DPAD_RIGHT = 90;
-    private final int DPAD_DOWNRIGHT = 135;
-    private final int DPAD_DOWN = 180;
-    private final int DPAD_DOWNLEFT = 225;
-    private final int DPAD_LEFT = 270;
-    private final int DPAD_UPLEFT = 315;
-    private final int DPAD_UP = 360;
+    /**
+    * Upright D-Pad POV value.
+    */
+    private static final int DPAD_UPRIGHT = 45;
+
+    /**
+    * Right D-Pad POV value.
+    */
+    private static final int DPAD_RIGHT = 90;
+
+    /**
+    * Downright D-Pad POV value.
+    */
+    private static final int DPAD_DOWNRIGHT = 135;
+
+    /**
+    * Down POV D-Pad value.
+    */
+    private static final int DPAD_DOWN = 180;
+
+    /**
+    * Downleft D-Pad POV value.
+    */
+    private static final int DPAD_DOWNLEFT = 225;
+
+    /**
+    * Left D-Pad POV value.
+    */
+    private static final int DPAD_LEFT = 270;
+
+    /**
+    * Upleft D-Pad POV value.
+    */
+    private static final int DPAD_UPLEFT = 315;
+
+    /**
+    * Up D-Pad POV value.
+    */
+    private static final int DPAD_UP = 360;
 
     /**
     * Method for returning the value of the D-Pad.
     * @return  value of the D-Pad
-    * 
+    *
     * @see LogitechF310.DPad
     */
     public DPad getDPad() {

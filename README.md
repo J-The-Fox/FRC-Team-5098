@@ -21,7 +21,7 @@ If you would like to contribute to this repository; ✨amazing!✨ Just follow s
 
 **Code**
 - If you're adding code, please make it well documented. We all would like to know what it is doing without digging around
-- If you would like to add another WPILib project, make sure to ask before hand. We don't want too many projects in here as this is more of an example repo
+- If you would like to add another WPILib project, make sure to ask before hand.
 - Stick to Java and Python if possible but if you would like to use C++, make it well documented as our team uses Java primarily. (Would need to go in its own WPILib project)
 - Add any examples you would like, can be related to the WPILib API or not. Any examples will help further the understanding of others
 
