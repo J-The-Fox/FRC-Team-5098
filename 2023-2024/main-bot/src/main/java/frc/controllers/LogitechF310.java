@@ -108,6 +108,16 @@ public class LogitechF310 {
     */
     private double deadBand;
 
+    /**
+     * Constructor for the LogitechF310 class.
+     * <p>
+     * This constructor is used to create a LogitechF310 object.
+     * This takes in the controller ID and the deadband value.
+     * </p>
+     *
+     * @param id             Controller ID (Port)
+     * @param deadBandValue  Deadband value
+     */
     public LogitechF310(final int id, final double deadBandValue) {
         controller = new Joystick(id);
         deadBand = deadBandValue;
@@ -302,7 +312,7 @@ public class LogitechF310 {
 
         /**
         * Down on the D-Pad.
-        */ 
+        */
         down,
 
         /**

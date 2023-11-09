@@ -22,12 +22,30 @@ import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 * @see edu.wpi.first.wpilibj.XboxController
 */
 public class Xbox {
-    
+
+    /**
+    * The controller object.
+    * In this case, a {@code XboxController} object.
+    */
     private XboxController controller;
+
+    /**
+    * The deadband value.
+    */
     private double deadBand;
 
-    public Xbox(final int ID, final double deadBandValue) {
-        controller = new XboxController(ID);
+    /**
+    * Constructor for the Xbox class.
+    * <p>
+    * This constructor is used to create a LogitechF310 object.
+    * This takes in the controller ID and the deadband value.
+    * </p>
+    *
+    * @param id             Controller ID (Port)
+    * @param deadBandValue  Deadband value
+    */ 
+    public Xbox(final int id, final double deadBandValue) {
+        controller = new XboxController(id);
         deadBand = deadBandValue;
     }
 
@@ -186,7 +204,7 @@ public class Xbox {
     /**
     * Method for returning the value of the back button.
     * @return  value of the back button
-    *  
+    *
     * @see Xbox#getStartButton
     */
     public boolean getBackButton() {
@@ -243,7 +261,7 @@ public class Xbox {
 
         /**
         * Down on the D-Pad.
-        */ 
+        */
         down,
 
         /**

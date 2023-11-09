@@ -22,10 +22,30 @@ import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 * @see edu.wpi.first.wpilibj.PS4Controller
 */
 public class PS4 {
-    
+
+    /**
+    * The controller object.
+    * In this case, a {@code PS4Controller} object.
+    *
+    * @see edu.wpi.first.wpilibj.PS4Controller
+    */
     private PS4Controller controller;
+
+    /**
+    * The deadband value.
+    */
     private double deadBand;
 
+    /**
+     * Constructor for the PS4 class.
+     * <p>
+     * This constructor is used to create a LogitechF310 object.
+     * This takes in the controller ID and the deadband value.
+     * </p>
+     *
+     * @param id             Controller ID (Port)
+     * @param deadBandValue  Deadband value
+     */
     public PS4(final int id, final double deadBandValue) {
         controller = new PS4Controller(id);
         deadBand = deadBandValue;
@@ -276,9 +296,9 @@ public class PS4 {
     public boolean getRightJoystickButton() {
         return controller.getR3Button();
     }
-    
+
     // Touchpad Methods //
-    
+
     /**
     * Method for returning the value of the Touchpad button.
     * @return  value of the Touchpad button
@@ -312,7 +332,7 @@ public class PS4 {
 
         /**
         * Down on the D-Pad.
-        */ 
+        */
         down,
 
         /**
