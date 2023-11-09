@@ -3,33 +3,37 @@ package frc.state_machine;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * State Machine class for controlling a state machine.
+ * This is mainly used during auto.
+ * 
+ * @see frc.components.auto
+ */
 public class StateMachine {
 
-    // Imported from 2022-2023 code
+    State       currentState;
+    List<State> states = new ArrayList<State>();
 
-    State       m_currentState;
-    List<State> m_states = new ArrayList<State>();
-
-    public void addState(State state) {
-        m_states.add(state);
+    public void addState(final State state) {
+        states.add(state);
     }
 
     /**
     * Method called to run the state machine
     */
     public void run() {
-        if (!m_states.isEmpty()) {
-            if (m_currentState == null && m_states.get(0).isValid()) {
-                m_currentState = m_states.get(0);
-                m_currentState.onEnter();
-                m_states.remove(0);
+        if (!states.isEmpty()) {
+            if (currentState == null && states.get(0).isValid()) {
+                currentState = states.get(0);
+                currentState.onEnter();
+                states.remove(0);
             }
         }
 
-        if (m_currentState != null) {
-            if (m_currentState.run()) {
-                m_currentState.onExit();
-                m_currentState = null;
+        if (currentState != null) {
+            if (currentState.run()) {
+                currentState.onExit();
+                currentState = null;
             }
         }
     }

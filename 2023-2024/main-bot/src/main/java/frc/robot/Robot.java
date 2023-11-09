@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import frc.CommonData;
 import frc.components.IComponent;
 import frc.components.SwerveDrive;
+import frc.components.autonomous.Autonomous;
 import frc.controllers.Xbox;
 import frc.controllers.PS4;
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
@@ -27,13 +28,12 @@ import frc.settings.Settings;
 * project.
 */
 public class Robot extends TimedRobot {
-    /**
-    * This function is run when the robot is first started up
-    * and should be used for any initialization code.
-    */
 
-    // Read the robot_settings.json file and store it in the settings variable
-    public static Settings settings;
+    /**
+     * The settings object.
+     * This is used to store the settings from the robot_settings.json file.
+     */
+    private static Settings settings;
     static {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -48,15 +48,49 @@ public class Robot extends TimedRobot {
     }
 
     // Initialize the controllers
-    // NOTE: This is assuming that both controllers are Xbox One controllers. This could easily be changed in the future
-    Xbox controller = new Xbox(settings.controllerID, 0);
-    PS4 auxController = new PS4(settings.auxControllerID, 0);
+    // NOTE: This might be used for a more dynamic way of selecting controllers
+    /**
+     * The main controller.
+     * This is used for the main driver.
+     * <p>
+     * This is an {@code Xbox} object.
+     * </p>
+     * <p>
+     * <i>Notice: This might be changed in the future.</i>
+     * </p>
+     */
+    private Xbox controller = new Xbox(settings.controllerID, 0);
+    /**
+     * The auxiliary controller.
+     * This is used for the auxiliary driver.
+     * <p>
+     * This is a {@code PS4} object.
+     * </p>
+     * <p>
+     * <i>Notice: This might be changed in the future.</i>
+     * </p>
+     */
+    private PS4 auxController = new PS4(settings.auxControllerID, 0);
 
     // Set up the components
-    // NOTE: More components will be added here. Only one here now is the Swerve Drive
-    IComponent[] components = new IComponent[] {
+    /**
+     * The components array.
+     * This is used to store all of the components.
+     * <p>
+     * This is an array of {@code IComponent} objects.
+     * </p>
+     * <p>
+     * <i>Note: More components will be added here.</i>
+     * </p>
+     */
+    private IComponent[] components = new IComponent[] {
         new SwerveDrive(settings.swerveDrive)
     };
+
+    /**
+     * The autonomous object.
+     */
+    private Autonomous autonomous;
 
     @Override
     public void robotInit() {
@@ -76,10 +110,15 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
+        autonomous = new Autonomous();
+        // Calibrate the gyro before autonomous to ensure that it is accurate
+        CommonData.setCalibrate(true);
     }
 
     @Override
     public void autonomousPeriodic() {
+        // Update the autonomous states
+        autonomous.update();
     }
 
     @Override
