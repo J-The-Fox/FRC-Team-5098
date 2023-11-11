@@ -10,7 +10,17 @@ import frc.state_machine.State;
  * This state drives the robot forward at 35% speed for 3 seconds
  * </p>
  */
-public class DriveState1 extends State {
+public final class DriveState1 extends State {
+
+    /**
+     * The forward speed of the robot
+     */
+    private static final double FORWARD_SPEED = 0.35;
+
+    /**
+     * The time the robot drives forward
+     */
+    private static final int DRIVE_TIME = 3;
 
     /**
      * Timer object
@@ -33,7 +43,7 @@ public class DriveState1 extends State {
     public boolean run() {
 
         // Set the values so it drives forward at a speed of 35% in reverse
-        CommonData.setForwardSpeed(-0.35);
+        CommonData.setForwardSpeed(-FORWARD_SPEED);
         CommonData.setDesiredTurn(0);
 
         // Set a new timer if one doesn't exist already
@@ -41,7 +51,7 @@ public class DriveState1 extends State {
             timer = new Timer();
             timer.start();
         // If the timer has elapses 3 seconds, exit the state
-        } else if (timer.hasElapsed(3)) {
+        } else if (timer.hasElapsed(DRIVE_TIME)) {
             return true;
         }
 

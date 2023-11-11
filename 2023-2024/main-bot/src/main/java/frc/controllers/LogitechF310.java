@@ -457,7 +457,7 @@ public class LogitechF310 {
      *
      * @return name of the controller
      */
-    public void getName() {
-        controller.getName();
+    public String getName() {
+        return(controller.getName());
     }
 }

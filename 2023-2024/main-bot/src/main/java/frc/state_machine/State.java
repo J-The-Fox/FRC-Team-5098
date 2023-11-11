@@ -1,7 +1,7 @@
 package frc.state_machine;
 
 /**
-* Abstract class used to create states for the state machine
+* Abstract class used to create states for the state machine.
 */
 public abstract class State {
 

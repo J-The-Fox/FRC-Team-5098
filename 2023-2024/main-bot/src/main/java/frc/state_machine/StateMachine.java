@@ -6,20 +6,32 @@ import java.util.List;
 /**
  * State Machine class for controlling a state machine.
  * This is mainly used during auto.
- * 
+ *
  * @see frc.components.auto
  */
-public class StateMachine {
+public final class StateMachine {
 
-    State       currentState;
-    List<State> states = new ArrayList<State>();
+    /**
+     * The current state of the state machine.
+     */
+    private State currentState;
 
+    /**
+     * The list of states to run.
+     */
+    private List<State> states = new ArrayList<State>();
+
+    /**
+     * Adds a state to the state machine.
+     *
+     * @param state  The state to add to the state machine.
+     */
     public void addState(final State state) {
         states.add(state);
     }
 
     /**
-    * Method called to run the state machine
+    * Method called to run the state machine.
     */
     public void run() {
         if (!states.isEmpty()) {

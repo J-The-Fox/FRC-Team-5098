@@ -27,7 +27,7 @@ import frc.settings.Settings;
 * you must also update the build.gradle file in the
 * project.
 */
-public class Robot extends TimedRobot {
+public final class Robot extends TimedRobot {
 
     /**
      * The settings object.
@@ -47,8 +47,9 @@ public class Robot extends TimedRobot {
         }
     }
 
-    // Initialize the controllers
+    // Initialize the controllers //
     // NOTE: This might be used for a more dynamic way of selecting controllers
+
     /**
      * The main controller.
      * This is used for the main driver.
@@ -59,7 +60,7 @@ public class Robot extends TimedRobot {
      * <i>Notice: This might be changed in the future.</i>
      * </p>
      */
-    private Xbox controller = new Xbox(settings.controllerID, 0);
+    private Xbox controller = new Xbox(settings.getControllerID(), 0);
     /**
      * The auxiliary controller.
      * This is used for the auxiliary driver.
@@ -70,7 +71,7 @@ public class Robot extends TimedRobot {
      * <i>Notice: This might be changed in the future.</i>
      * </p>
      */
-    private PS4 auxController = new PS4(settings.auxControllerID, 0);
+    private PS4 auxController = new PS4(settings.getAuxControllerID(), 0);
 
     // Set up the components
     /**
@@ -84,7 +85,7 @@ public class Robot extends TimedRobot {
      * </p>
      */
     private IComponent[] components = new IComponent[] {
-        new SwerveDrive(settings.swerveDrive)
+        new SwerveDrive(settings.getSwerveDriveSettings())
     };
 
     /**
@@ -101,7 +102,8 @@ public class Robot extends TimedRobot {
 
         // For each component in the components array, update it
         // This calls the update method in each of the component classes
-        // Since this in the robotPeriodic method, this will apply to all modes (autonomous, teleop, etc.)
+        // Since this in the robotPeriodic method,
+        // this will apply to all modes (autonomous, teleop, etc.)
         for (var actuator : components)
         {
             actuator.update();
@@ -140,13 +142,14 @@ public class Robot extends TimedRobot {
     @Override
     public void disabledInit() {
 
-        // "Turn off" all functions of the robot
+        // "Turn off" all functions of the robot //
 
         CommonData.setDesiredTurn(0); // Set the turn speed to 0
         CommonData.setForwardSpeed(0); // Set the drive speed to 0
 
         // Turn off the rumble on any controllers
         controller.setRumble(RumbleType.kBothRumble, 0);
+        auxController.setRumble(RumbleType.kBothRumble, 0);
 
         CommonData.setCounter(0); // Set the counter to 0 (used in autonomous)
     }

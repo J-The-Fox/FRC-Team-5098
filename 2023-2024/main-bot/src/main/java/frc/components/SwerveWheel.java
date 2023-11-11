@@ -26,14 +26,14 @@ public class SwerveWheel
 
     public SwerveWheel(SwerveWheelSettings settings)
     {
-        turnMotor  = new TalonFX(settings.turnID);
-        driveMotor = new TalonFX(settings.driveID);
-        encoder    = new CANCoder(settings.encoderID);
+        turnMotor  = new TalonFX(settings.getTurnID());
+        driveMotor = new TalonFX(settings.getDriveID());
+        encoder    = new CANCoder(settings.getEncoderID());
 
-        location       = settings.location;
-        defensiveAngle = settings.defensiveAngle;
+        location       = settings.getLocation();
+        defensiveAngle = settings.getDefensiveAngle();
 
-        modulePos = new Translation2d(settings.posX, settings.posY);
+        modulePos = new Translation2d(settings.getPosX(), settings.getPosY());
     }
 
     public void set(SwerveModuleState swerveModuleState) {

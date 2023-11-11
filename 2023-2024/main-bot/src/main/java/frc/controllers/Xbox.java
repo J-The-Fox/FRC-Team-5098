@@ -393,7 +393,7 @@ public class Xbox {
 
     /**
      * Method for setting the rumble of the controller.
-     * 
+     *
      * @param type  type of rumble to set
      * @param value value to set the rumble to
      *
@@ -419,7 +419,7 @@ public class Xbox {
      *
      * @return name of the controller
      */
-    public void getName() {
-        controller.getName();
+    public String getName() {
+        return(controller.getName());
     }
 }

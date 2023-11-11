@@ -19,10 +19,10 @@ public class SwerveDrive implements IComponent {
 
     public SwerveDrive(final SwerveDriveSettings settings) {
         swerveWheels = new SwerveWheel[] {
-            new SwerveWheel(settings.FLSwerve),
-            new SwerveWheel(settings.FRSwerve),
-            new SwerveWheel(settings.BLSwerve),
-            new SwerveWheel(settings.BRSwerve)
+            new SwerveWheel(settings.getFLSwerveSettings()),
+            new SwerveWheel(settings.getFRSwerveSettings()),
+            new SwerveWheel(settings.getBLSwerveSettings()),
+            new SwerveWheel(settings.getBRSwerveSettings())
         };
 
         kinematics = new SwerveDriveKinematics(swerveWheels[0].getSwervePos(), swerveWheels[1].getSwervePos(), swerveWheels[2].getSwervePos(), swerveWheels[3].getSwervePos());

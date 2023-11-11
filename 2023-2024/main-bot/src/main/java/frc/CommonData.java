@@ -55,15 +55,17 @@ public final class CommonData {
     // Accesor Methods //
 
     /**
-    * Method for returning desiredTurn.
-    * @return desiredTurn
-    */
+     * Method for returning desiredTurn.
+     *s
+     * @return desiredTurn
+     */
     public static double getDesiredTurn() {
         return desiredTurn;
     }
 
     /**
      * Method for setting the desiredTurn.
+     *
      * @param value  value to set desiredTurn
      */
     public static void setDesiredTurn(final double value) {
@@ -71,81 +73,91 @@ public final class CommonData {
     }
 
     /**
-    * Method for returning forwardSpeed.
-    * @return forwardSpeed
-    */
+     * Method for returning forwardSpeed.
+     *
+     * @return forwardSpeed
+     */
     public static double getForwardSpeed() {
         return forwardSpeed;
     }
 
     /**
-    * Method for setting forwardSpeed.
-    * @param value  value to set forwardSpeed
-    */
+     * Method for setting forwardSpeed.
+     *
+     * @param value  value to set forwardSpeed
+     */
     public static void setForwardSpeed(final double value) {
         forwardSpeed = value;
     }
 
     /**
-    * Method for returning sideSpeed.
-    * @return sideSpeed
-    */
+     * Method for returning sideSpeed.
+     *
+     * @return sideSpeed
+     */
     public static double getSideSpeed() {
         return sideSpeed;
     }
 
     /**
-    * Method for setting sideSpeed.
-    * @param value  value to set sideSpeed
-    */
+     * Method for setting sideSpeed.
+     *
+     * @param value  value to set sideSpeed
+     */
     public static void setSideSpeed(final double value) {
         sideSpeed = value;
     }
 
     /**
-    * Method for returning battenDownTheHatches.
-    * @return battenDownTheHatches
-    */
+     * Method for returning battenDownTheHatches.
+     *
+     * @return battenDownTheHatches
+     */
     public static boolean getBattenDownTheHatches() {
         return battenDownTheHatches;
     }
 
     /**
-    * Method for setting battenDownTheHatches.
-    * @param value  value to set battenDownTheHatches
-    */
+     * Method for setting battenDownTheHatches.
+     *
+     * @param value  value to set battenDownTheHatches
+     */
     public static void setBattenDownTheHatches(final boolean value) {
         battenDownTheHatches = value;
     }
 
     /**
-    * Method for returning calibrate.
-    * @return calibrate
-    */
+     * Method for returning calibrate.
+     *
+     * @return calibrate
+     */
     public static boolean getCalibrate() {
         return calibrate;
     }
 
     /**
-    * Method for setting calibrate.
-    * @param value  value to set calibrate
-    */
+     * Method for setting calibrate.
+     *
+     * @param value  value to set calibrate
+     */
     public static void setCalibrate(final boolean value) {
         calibrate = value;
     }
 
     /**
-    * Method for returning counter.
-    * @return counter
-    */
+     * Method for returning counter.
+     *
+     * @return counter
+     */
     public static int getCounter() {
         return counter;
     }
 
     /**
-    * Method for setting counter.
-    * @param value  value to set counter
-    */
+     * Method for setting counter.
+     *
+     * @param value  value to set counter
+     */
     public static void setCounter(final int value) {
         counter = value;
     }
