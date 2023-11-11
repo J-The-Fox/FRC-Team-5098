@@ -493,6 +493,6 @@ public class PS4 {
      * @return name of the controller
      */
     public String getName() {
-        return(controller.getName());
+        return controller.getName();
     }
 }

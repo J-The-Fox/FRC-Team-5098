@@ -7,7 +7,7 @@ import java.util.List;
  * State Machine class for controlling a state machine.
  * This is mainly used during auto.
  *
- * @see frc.components.auto
+ * @see frc.components.autonomous.Autonomous
  */
 public final class StateMachine {
 

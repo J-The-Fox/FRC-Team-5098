@@ -25,12 +25,12 @@ public class SwerveWheelSettings {
 
     public enum Location {
         /**
-         * Front of the robot
+         * Front of the robot.
          */
         front,
 
         /**
-         * Back of the robot
+         * Back of the robot.
          */
         back
     }
@@ -125,7 +125,7 @@ public class SwerveWheelSettings {
     /**
      * Set the location of the swerve wheel.
      *
-     * @param location  The location of the swerve wheel.
+     * @param loc  The location of the swerve wheel.
      */
     public void setLocation(final Location loc) {
         location = loc;

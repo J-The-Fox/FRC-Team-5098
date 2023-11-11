@@ -420,6 +420,6 @@ public class Xbox {
      * @return name of the controller
      */
     public String getName() {
-        return(controller.getName());
+        return controller.getName();
     }
 }

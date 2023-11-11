@@ -19,13 +19,13 @@ import frc.state_machine.StateMachine;
  *
  * @see frc.state_machine.StateMachine
  */
-public class Autonomous implements IComponent {
+public final class Autonomous implements IComponent {
 
 
     /**
-     * State machine object
+     * State machine object.
      */
-    StateMachine stateMachine = new StateMachine();
+    private StateMachine stateMachine = new StateMachine();
 
     /**
      * Autonomous constructor.

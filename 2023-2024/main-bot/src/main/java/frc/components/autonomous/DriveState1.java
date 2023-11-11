@@ -5,7 +5,7 @@ import frc.CommonData;
 import frc.state_machine.State;
 
 /**
- * The first drive state during autonomous mode
+ * The first drive state during autonomous mode.
  * <p>
  * This state drives the robot forward at 35% speed for 3 seconds
  * </p>
@@ -13,26 +13,26 @@ import frc.state_machine.State;
 public final class DriveState1 extends State {
 
     /**
-     * The forward speed of the robot
+     * The forward speed of the robot.
      */
     private static final double FORWARD_SPEED = 0.35;
 
     /**
-     * The time the robot drives forward
+     * The time the robot drives forward.
      */
     private static final int DRIVE_TIME = 3;
 
     /**
-     * Timer object
+     * Timer object.
      */
-    Timer timer;
+    private Timer timer;
 
     @Override
     public void onEnter() {
         // Mainly used for debugging
         System.out.println("Drive State 1 entered");
     }
-    
+
     @Override
     public void onExit() {
         // Mainly used for debugging
