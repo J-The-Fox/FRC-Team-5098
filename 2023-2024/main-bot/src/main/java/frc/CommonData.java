@@ -56,7 +56,7 @@ public final class CommonData {
 
     /**
      * Method for returning desiredTurn.
-     *s
+     *
      * @return desiredTurn
      */
     public static double getDesiredTurn() {
