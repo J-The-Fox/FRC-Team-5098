@@ -9,6 +9,9 @@
 
 [![Readme Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=J-The-Fox&repo=FRC-Team-5098&theme=dark)](https://github.com/J-The-Fox/FRC-Team-5098)
 
+> [!CAUTION]
+> **This repository has been archived! Please see the updated repositories [here](https://github.com/Sting-R)**
+
 ## Contributing
 
 This is free for **anyone** to contribute to! (Especailly if you are part of our team)  
